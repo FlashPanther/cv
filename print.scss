@@ -1,0 +1,41 @@
+// Core variables and mixins
+
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+a:after{content: '' !important;}
+
+header{
+  @extend .text-center;
+  border-bottom: solid 1px;
+  img, a{
+    display: none !important;
+  }
+}
+
+#competences{display: none !important;}
+#section2{
+  .competence{
+    @extend .row;
+    h2{
+      @extend .col-xs-4;
+    }
+    .level{
+      display: none !important;
+    }
+    .details{
+      padding-top: 30px;
+      @extend .col-md-8;
+      @extend .list-unstyled;
+      @extend .text-right;
+      li{
+        @extend .label;
+        @extend .label-default;
+        a{color: white;}
+      }
+    }
+    .description{
+      clear: both;
+      @extend .col-md-12;
+    }
+  }
+}

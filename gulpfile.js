@@ -7,25 +7,43 @@ var gulp   = require('gulp'),
     sass = require('gulp-sass');
 
 gulp.task('js', function(){
-    return gulp.src([])
+    return gulp.src([
+        'bower_components/jquery/dist/jquery.js',
+        'bower_components/jquery.easing/js/jquery.easing.js',
+        'bower_components/wow/dist/wow.js',
+        'js/page-scroll.js'
+    ])
         .pipe(concat('app.js'))
-        .pipe(uglify());
+        .pipe(gulp.dest('./'))
+        //.pipe(uglify())
+        ;
 });
 
-gulp.task('scss', function(){
+gulp.task('screen', function(){
     return gulp.src([
-        'style.scss'
+        'bower_components/wow/css/libs/animate.css',
+        'screen.scss'
     ])
         .pipe(sass())
         //.pipe(uglifycss())
-        .pipe(concat('style.css'))
+        .pipe(concat('screen.css'))
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['scss', 'js']);
+gulp.task('print', function(){
+    return gulp.src([
+        'print.scss'
+    ])
+        .pipe(sass())
+        //.pipe(uglifycss())
+        .pipe(concat('print.css'))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('default', ['screen', 'print', 'js']);
 
 gulp.task('watch', function() {
     gulp.start(['default']);
-    //gulp.watch('app/Resources/js/**/*.js', ['js']);
+    gulp.watch('./js/*.js', ['js']);
     gulp.watch('./style.scss', ['scss']);
 });
