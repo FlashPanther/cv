@@ -2240,12 +2240,13 @@ th {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .btn > .caret, header .header-container .header-inner a > .caret, #competences .section-container > a > .caret,
+  .btn > .caret, header .header-container .header-inner a > .caret, #intro .section-container > a > .caret, #competences .section-container > a > .caret,
   .dropup > .btn > .caret, header .header-container .header-inner
-  .dropup > a > .caret, #competences
+  .dropup > a > .caret, #intro
+  .section-container.dropup > a > .caret, #competences
   .section-container.dropup > a > .caret {
     border-top-color: #000 !important; }
-  .label, #section2 .competence .details li {
+  .label, #competences .section-container .competence .details li {
     border: 1px solid #000; }
   .table {
     border-collapse: collapse !important; }
@@ -3112,7 +3113,7 @@ img {
   height: auto; }
 
 .img-rounded {
-  border-radius: 40px; }
+  border-radius: 6px; }
 
 .img-thumbnail {
   padding: 4px;
@@ -3367,7 +3368,7 @@ ol {
   ol ol {
     margin-bottom: 0; }
 
-.list-unstyled, #section2 .competence .details {
+.list-unstyled, #competences .section-container .competence .details, #parcours .timeline {
   padding-left: 0;
   list-style: none; }
 
@@ -3550,22 +3551,22 @@ pre {
   .container-fluid:after {
     clear: both; }
 
-.row, #section2 .competence {
+.row, #competences .section-container .competence, #parcours .timeline li {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, #section2 .competence:before, .row:after, #section2 .competence:after {
+  .row:before, #competences .section-container .competence:before, #parcours .timeline li:before, .row:after, #competences .section-container .competence:after, #parcours .timeline li:after {
     content: " ";
     display: table; }
-  .row:after, #section2 .competence:after {
+  .row:after, #competences .section-container .competence:after, #parcours .timeline li:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #section2 .competence .level, #section2 .competence .details, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #section2 .competence h2, .col-sm-12, .col-md-12, #section2 .competence .description, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #competences .section-container .competence .level, #competences .section-container .competence .details, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #competences .section-container .competence h2, .col-sm-12, .col-md-12, #competences .section-container .competence .description, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #section2 .competence h2 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #competences .section-container .competence h2 {
   float: left; }
 
 .col-xs-1 {
@@ -3601,7 +3602,7 @@ pre {
 .col-xs-11 {
   width: 91.66667%; }
 
-.col-xs-12, #section2 .competence h2 {
+.col-xs-12, #competences .section-container .competence h2 {
   width: 100%; }
 
 .col-xs-pull-0 {
@@ -3828,7 +3829,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, #section2 .competence .level, #section2 .competence .details, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #section2 .competence .description {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, #competences .section-container .competence .level, #competences .section-container .competence .details, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #competences .section-container .competence .description {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
@@ -3840,7 +3841,7 @@ pre {
     width: 33.33333%; }
   .col-md-5 {
     width: 41.66667%; }
-  .col-md-6, #section2 .competence .level, #section2 .competence .details {
+  .col-md-6, #competences .section-container .competence .level, #competences .section-container .competence .details {
     width: 50%; }
   .col-md-7 {
     width: 58.33333%; }
@@ -3852,7 +3853,7 @@ pre {
     width: 83.33333%; }
   .col-md-11 {
     width: 91.66667%; }
-  .col-md-12, #section2 .competence .description {
+  .col-md-12, #competences .section-container .competence .description {
     width: 100%; }
   .col-md-pull-0 {
     right: auto; }
@@ -4496,11 +4497,13 @@ fieldset[disabled]
   .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn, header .header-container .header-inner
-  .input-group-lg > .input-group-btn > a.form-control-static, #competences
+  .input-group-lg > .input-group-btn > a.form-control-static, #intro
+  .input-group-lg > .section-container.input-group-btn > a.form-control-static, #competences
   .input-group-lg > .section-container.input-group-btn > a.form-control-static, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, header .header-container .header-inner
-  .input-group-sm > .input-group-btn > a.form-control-static, #competences
+  .input-group-sm > .input-group-btn > a.form-control-static, #intro
+  .input-group-sm > .section-container.input-group-btn > a.form-control-static, #competences
   .input-group-sm > .section-container.input-group-btn > a.form-control-static {
     padding-left: 0;
     padding-right: 0; }
@@ -4508,7 +4511,8 @@ fieldset[disabled]
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, header .header-container .header-inner
-.input-group-sm > .input-group-btn > a, #competences
+.input-group-sm > .input-group-btn > a, #intro
+.input-group-sm > .section-container.input-group-btn > a, #competences
 .input-group-sm > .section-container.input-group-btn > a {
   height: 30px;
   padding: 5px 10px;
@@ -4556,13 +4560,14 @@ select[multiple].input-sm,
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, header .header-container .header-inner
-.input-group-lg > .input-group-btn > a, #competences
+.input-group-lg > .input-group-btn > a, #intro
+.input-group-lg > .section-container.input-group-btn > a, #competences
 .input-group-lg > .section-container.input-group-btn > a {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 40px; }
+  border-radius: 6px; }
 
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
@@ -4584,7 +4589,7 @@ select[multiple].input-lg,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 40px; }
+  border-radius: 6px; }
 
 .form-group-lg select.form-control {
   height: 46px;
@@ -4621,7 +4626,8 @@ select[multiple].input-lg,
 .input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback, header .header-container .header-inner
-.input-group-lg > .input-group-btn > a + .form-control-feedback, #competences
+.input-group-lg > .input-group-btn > a + .form-control-feedback, #intro
+.input-group-lg > .section-container.input-group-btn > a + .form-control-feedback, #competences
 .input-group-lg > .section-container.input-group-btn > a + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
@@ -4632,7 +4638,8 @@ select[multiple].input-lg,
 .input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback, header .header-container .header-inner
-.input-group-sm > .input-group-btn > a + .form-control-feedback, #competences
+.input-group-sm > .input-group-btn > a + .form-control-feedback, #intro
+.input-group-sm > .section-container.input-group-btn > a + .form-control-feedback, #competences
 .input-group-sm > .section-container.input-group-btn > a + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
@@ -4818,7 +4825,7 @@ select[multiple].input-lg,
     padding-top: 6px;
     font-size: 12px; } }
 
-.btn, header .header-container .header-inner a, #competences .section-container > a {
+.btn, header .header-container .header-inner a, #intro .section-container > a, #competences .section-container > a {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -4837,22 +4844,24 @@ select[multiple].input-lg,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .btn:focus, header .header-container .header-inner a:focus, #competences .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #competences .section-container > a.focus, .btn:active:focus, header .header-container .header-inner a:active:focus, #competences .section-container > a:active:focus, .btn:active.focus, header .header-container .header-inner a:active.focus, #competences .section-container > a:active.focus, .btn.active:focus, header .header-container .header-inner a.active:focus, #competences .section-container > a.active:focus, .btn.active.focus, header .header-container .header-inner a.active.focus, #competences .section-container > a.active.focus {
+  .btn:focus, header .header-container .header-inner a:focus, #intro .section-container > a:focus, #competences .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #intro .section-container > a.focus, #competences .section-container > a.focus, .btn:active:focus, header .header-container .header-inner a:active:focus, #intro .section-container > a:active:focus, #competences .section-container > a:active:focus, .btn:active.focus, header .header-container .header-inner a:active.focus, #intro .section-container > a:active.focus, #competences .section-container > a:active.focus, .btn.active:focus, header .header-container .header-inner a.active:focus, #intro .section-container > a.active:focus, #competences .section-container > a.active:focus, .btn.active.focus, header .header-container .header-inner a.active.focus, #intro .section-container > a.active.focus, #competences .section-container > a.active.focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:hover, header .header-container .header-inner a:hover, #competences .section-container > a:hover, .btn:focus, header .header-container .header-inner a:focus, #competences .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #competences .section-container > a.focus {
+  .btn:hover, header .header-container .header-inner a:hover, #intro .section-container > a:hover, #competences .section-container > a:hover, .btn:focus, header .header-container .header-inner a:focus, #intro .section-container > a:focus, #competences .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #intro .section-container > a.focus, #competences .section-container > a.focus {
     color: #333;
     text-decoration: none; }
-  .btn:active, header .header-container .header-inner a:active, #competences .section-container > a:active, .btn.active, header .header-container .header-inner a.active, #competences .section-container > a.active {
+  .btn:active, header .header-container .header-inner a:active, #intro .section-container > a:active, #competences .section-container > a:active, .btn.active, header .header-container .header-inner a.active, #intro .section-container > a.active, #competences .section-container > a.active {
     outline: 0;
     background-image: none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, header .header-container .header-inner a.disabled, #competences .section-container > a.disabled, .btn[disabled], header .header-container .header-inner a[disabled], #competences .section-container > a[disabled],
+  .btn.disabled, header .header-container .header-inner a.disabled, #intro .section-container > a.disabled, #competences .section-container > a.disabled, .btn[disabled], header .header-container .header-inner a[disabled], #intro .section-container > a[disabled], #competences .section-container > a[disabled],
   fieldset[disabled] .btn,
   fieldset[disabled] header .header-container .header-inner a, header .header-container .header-inner
   fieldset[disabled] a,
+  fieldset[disabled] #intro .section-container > a, #intro
+  fieldset[disabled] .section-container > a,
   fieldset[disabled] #competences .section-container > a, #competences
   fieldset[disabled] .section-container > a {
     cursor: not-allowed;
@@ -4861,10 +4870,12 @@ select[multiple].input-lg,
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-a.btn.disabled, header .header-container .header-inner a.disabled, #competences .section-container > a.disabled,
+a.btn.disabled, header .header-container .header-inner a.disabled, #intro .section-container > a.disabled, #competences .section-container > a.disabled,
 fieldset[disabled] a.btn,
 fieldset[disabled] header .header-container .header-inner a, header .header-container .header-inner
 fieldset[disabled] a,
+fieldset[disabled] #intro .section-container > a, #intro
+fieldset[disabled] .section-container > a,
 fieldset[disabled] #competences .section-container > a, #competences
 fieldset[disabled] .section-container > a {
   pointer-events: none; }
@@ -4902,7 +4913,7 @@ fieldset[disabled] .section-container > a {
   fieldset[disabled] .btn-default.focus {
     background-color: #fff;
     border-color: #ccc; }
-  .btn-default .badge {
+  .btn-default .badge, .btn-default #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-default .timeline-badge {
     color: #fff;
     background-color: #333; }
 
@@ -4939,7 +4950,7 @@ fieldset[disabled] .section-container > a {
   fieldset[disabled] .btn-primary.focus {
     background-color: #337ab7;
     border-color: #2e6da4; }
-  .btn-primary .badge {
+  .btn-primary .badge, .btn-primary #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-primary .timeline-badge {
     color: #337ab7;
     background-color: #fff; }
 
@@ -4976,7 +4987,7 @@ fieldset[disabled] .section-container > a {
   fieldset[disabled] .btn-success.focus {
     background-color: #5cb85c;
     border-color: #4cae4c; }
-  .btn-success .badge {
+  .btn-success .badge, .btn-success #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-success .timeline-badge {
     color: #5cb85c;
     background-color: #fff; }
 
@@ -5013,7 +5024,7 @@ fieldset[disabled] .section-container > a {
   fieldset[disabled] .btn-info.focus {
     background-color: #5bc0de;
     border-color: #46b8da; }
-  .btn-info .badge {
+  .btn-info .badge, .btn-info #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-info .timeline-badge {
     color: #5bc0de;
     background-color: #fff; }
 
@@ -5050,7 +5061,7 @@ fieldset[disabled] .section-container > a {
   fieldset[disabled] .btn-warning.focus {
     background-color: #f0ad4e;
     border-color: #eea236; }
-  .btn-warning .badge {
+  .btn-warning .badge, .btn-warning #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-warning .timeline-badge {
     color: #f0ad4e;
     background-color: #fff; }
 
@@ -5087,7 +5098,7 @@ fieldset[disabled] .section-container > a {
   fieldset[disabled] .btn-danger.focus {
     background-color: #d9534f;
     border-color: #d43f3a; }
-  .btn-danger .badge {
+  .btn-danger .badge, .btn-danger #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-danger .timeline-badge {
     color: #d9534f;
     background-color: #fff; }
 
@@ -5112,19 +5123,19 @@ fieldset[disabled] .section-container > a {
     color: #777777;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, header .header-container .header-inner a, #competences .section-container > a {
+.btn-lg, .btn-group-lg > .btn, header .header-container .header-inner a, #intro .section-container > a, #competences .section-container > a {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 40px; }
+  border-radius: 6px; }
 
-.btn-sm, .btn-group-sm > .btn, header .header-container .header-inner .btn-group-sm > a, #competences .section-container.btn-group-sm > a {
+.btn-sm, .btn-group-sm > .btn, header .header-container .header-inner .btn-group-sm > a, #intro .section-container.btn-group-sm > a, #competences .section-container.btn-group-sm > a {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.btn-xs, .btn-group-xs > .btn, header .header-container .header-inner .btn-group-xs > a, #competences .section-container.btn-group-xs > a {
+.btn-xs, .btn-group-xs > .btn, header .header-container .header-inner .btn-group-xs > a, #intro .section-container.btn-group-xs > a, #competences .section-container.btn-group-xs > a {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -5142,23 +5153,23 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
-.fade {
+.fade, #parcours .timeline li .timeline-panel {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
-  .fade.in {
+  .fade.in, #parcours .timeline li .timeline-panel {
     opacity: 1; }
 
 .collapse {
   display: none; }
-  .collapse.in {
+  .collapse.in, #parcours .timeline li .collapse.timeline-panel {
     display: block; }
 
-tr.collapse.in {
+tr.collapse.in, #parcours .timeline li tr.collapse.timeline-panel {
   display: table-row; }
 
-tbody.collapse.in {
+tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
   display: table-row-group; }
 
 .collapsing {
@@ -5308,36 +5319,45 @@ tbody.collapse.in {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, header .header-container .header-inner .btn-group > a, #competences .section-container.btn-group > a,
+  .btn-group > .btn, header .header-container .header-inner .btn-group > a, #intro .section-container.btn-group > a, #competences .section-container.btn-group > a,
   .btn-group-vertical > .btn, header .header-container .header-inner
-  .btn-group-vertical > a, #competences
+  .btn-group-vertical > a, #intro
+  .section-container.btn-group-vertical > a, #competences
   .section-container.btn-group-vertical > a {
     position: relative;
     float: left; }
-    .btn-group > .btn:hover, header .header-container .header-inner .btn-group > a:hover, #competences .section-container.btn-group > a:hover, .btn-group > .btn:focus, header .header-container .header-inner .btn-group > a:focus, #competences .section-container.btn-group > a:focus, .btn-group > .btn:active, header .header-container .header-inner .btn-group > a:active, #competences .section-container.btn-group > a:active, .btn-group > .btn.active, header .header-container .header-inner .btn-group > a.active, #competences .section-container.btn-group > a.active,
+    .btn-group > .btn:hover, header .header-container .header-inner .btn-group > a:hover, #intro .section-container.btn-group > a:hover, #competences .section-container.btn-group > a:hover, .btn-group > .btn:focus, header .header-container .header-inner .btn-group > a:focus, #intro .section-container.btn-group > a:focus, #competences .section-container.btn-group > a:focus, .btn-group > .btn:active, header .header-container .header-inner .btn-group > a:active, #intro .section-container.btn-group > a:active, #competences .section-container.btn-group > a:active, .btn-group > .btn.active, header .header-container .header-inner .btn-group > a.active, #intro .section-container.btn-group > a.active, #competences .section-container.btn-group > a.active,
     .btn-group-vertical > .btn:hover, header .header-container .header-inner
-    .btn-group-vertical > a:hover, #competences
+    .btn-group-vertical > a:hover, #intro
+    .section-container.btn-group-vertical > a:hover, #competences
     .section-container.btn-group-vertical > a:hover,
     .btn-group-vertical > .btn:focus, header .header-container .header-inner
-    .btn-group-vertical > a:focus, #competences
+    .btn-group-vertical > a:focus, #intro
+    .section-container.btn-group-vertical > a:focus, #competences
     .section-container.btn-group-vertical > a:focus,
     .btn-group-vertical > .btn:active, header .header-container .header-inner
-    .btn-group-vertical > a:active, #competences
+    .btn-group-vertical > a:active, #intro
+    .section-container.btn-group-vertical > a:active, #competences
     .section-container.btn-group-vertical > a:active,
     .btn-group-vertical > .btn.active, header .header-container .header-inner
-    .btn-group-vertical > a.active, #competences
+    .btn-group-vertical > a.active, #intro
+    .section-container.btn-group-vertical > a.active, #competences
     .section-container.btn-group-vertical > a.active {
       z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .btn-group a + .btn, .btn-group #competences .section-container > a + .btn, #competences .btn-group .section-container > a + .btn, .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .btn-group .btn + a, .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .btn-group a + a, .btn-group #competences header .header-container .header-inner .section-container > a + a, .btn-group #competences .section-container > .btn + a, #competences .btn-group .section-container > .btn + a, #competences .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #competences .section-container > a + a, #competences .btn-group .section-container > a + a,
+.btn-group .btn + .btn, .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .btn-group a + .btn, .btn-group #intro .section-container > a + .btn, #intro .btn-group .section-container > a + .btn, .btn-group #competences .section-container > a + .btn, #competences .btn-group .section-container > a + .btn, .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .btn-group .btn + a, .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .btn-group a + a, .btn-group #intro header .header-container .header-inner .section-container > a + a, .btn-group #competences header .header-container .header-inner .section-container > a + a, .btn-group #intro .section-container > .btn + a, #intro .btn-group .section-container > .btn + a, #intro .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #intro .section-container > a + a, #intro .btn-group .section-container > a + a, .btn-group #competences .section-container > .btn + a, #competences .btn-group .section-container > .btn + a, #competences .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #competences .section-container > a + a, #competences .btn-group .section-container > a + a,
 .btn-group .btn + .btn-group,
 .btn-group header .header-container .header-inner a + .btn-group, header .header-container .header-inner
 .btn-group a + .btn-group,
+.btn-group #intro .section-container > a + .btn-group, #intro
+.btn-group .section-container > a + .btn-group,
 .btn-group #competences .section-container > a + .btn-group, #competences
 .btn-group .section-container > a + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group header .header-container .header-inner .btn-group + a, header .header-container .header-inner
 .btn-group .btn-group + a,
+.btn-group #intro .section-container > .btn-group + a, #intro
+.btn-group .section-container > .btn-group + a,
 .btn-group #competences .section-container > .btn-group + a, #competences
 .btn-group .section-container > .btn-group + a,
 .btn-group .btn-group + .btn-group {
@@ -5350,25 +5370,25 @@ tbody.collapse.in {
     display: table; }
   .btn-toolbar:after {
     clear: both; }
-  .btn-toolbar .btn, .btn-toolbar header .header-container .header-inner a, header .header-container .header-inner .btn-toolbar a, .btn-toolbar #competences .section-container > a, #competences .btn-toolbar .section-container > a,
+  .btn-toolbar .btn, .btn-toolbar header .header-container .header-inner a, header .header-container .header-inner .btn-toolbar a, .btn-toolbar #intro .section-container > a, #intro .btn-toolbar .section-container > a, .btn-toolbar #competences .section-container > a, #competences .btn-toolbar .section-container > a,
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, header .header-container .header-inner .btn-toolbar > a, #competences .section-container.btn-toolbar > a,
+  .btn-toolbar > .btn, header .header-container .header-inner .btn-toolbar > a, #intro .section-container.btn-toolbar > a, #competences .section-container.btn-toolbar > a,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #intro .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, header .header-container .header-inner .btn-group > a:first-child, #competences .section-container.btn-group > a:first-child {
+.btn-group > .btn:first-child, header .header-container .header-inner .btn-group > a:first-child, #intro .section-container.btn-group > a:first-child, #competences .section-container.btn-group > a:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #intro .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group > a:last-child:not(:first-child), #competences .section-container.btn-group > a:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group > a:last-child:not(:first-child), #intro .section-container.btn-group > a:last-child:not(:first-child), #competences .section-container.btn-group > a:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -5376,15 +5396,15 @@ tbody.collapse.in {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group > .btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group > .btn-group:not(:first-child):not(:last-child) > a, #intro .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, #intro .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, #intro .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -5392,11 +5412,11 @@ tbody.collapse.in {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #intro .section-container.btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #intro .section-container.btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -5407,20 +5427,21 @@ tbody.collapse.in {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.btn .caret, header .header-container .header-inner a .caret, #competences .section-container > a .caret {
+.btn .caret, header .header-container .header-inner a .caret, #intro .section-container > a .caret, #competences .section-container > a .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, header .header-container .header-inner a .caret, #competences .section-container > a .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, header .header-container .header-inner a .caret, #intro .section-container > a .caret, #competences .section-container > a .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup header .header-container .header-inner a .caret, header .header-container .header-inner .dropup a .caret, .dropup #competences .section-container > a .caret, #competences .dropup .section-container > a .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup header .header-container .header-inner a .caret, header .header-container .header-inner .dropup a .caret, .dropup #intro .section-container > a .caret, #intro .dropup .section-container > a .caret, .dropup #competences .section-container > a .caret, #competences .dropup .section-container > a .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, header .header-container .header-inner .btn-group-vertical > a, #competences .section-container.btn-group-vertical > a,
+.btn-group-vertical > .btn, header .header-container .header-inner .btn-group-vertical > a, #intro .section-container.btn-group-vertical > a, #competences .section-container.btn-group-vertical > a,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn, header .header-container .header-inner
-.btn-group-vertical > .btn-group > a, #competences
+.btn-group-vertical > .btn-group > a, #intro
+.btn-group-vertical > .section-container.btn-group > a, #competences
 .btn-group-vertical > .section-container.btn-group > a {
   display: block;
   float: none;
@@ -5434,44 +5455,46 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:after {
   clear: both; }
 
-.btn-group-vertical > .btn-group > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group > a, #competences .btn-group-vertical > .section-container.btn-group > a {
+.btn-group-vertical > .btn-group > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group > a, #intro .btn-group-vertical > .section-container.btn-group > a, #competences .btn-group-vertical > .section-container.btn-group > a {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, header .header-container .header-inner .btn-group-vertical > a + .btn, #competences .section-container.btn-group-vertical > a + .btn, header .header-container .header-inner .btn-group-vertical > .btn + a, header .header-container .header-inner .btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > .btn + a, #competences header .header-container .header-inner .section-container.btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > a + a,
+.btn-group-vertical > .btn + .btn, header .header-container .header-inner .btn-group-vertical > a + .btn, #intro .section-container.btn-group-vertical > a + .btn, #competences .section-container.btn-group-vertical > a + .btn, header .header-container .header-inner .btn-group-vertical > .btn + a, header .header-container .header-inner .btn-group-vertical > a + a, #intro .section-container.btn-group-vertical > .btn + a, #intro header .header-container .header-inner .section-container.btn-group-vertical > a + a, #intro .section-container.btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > .btn + a, #competences header .header-container .header-inner .section-container.btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > a + a,
 .btn-group-vertical > .btn + .btn-group, header .header-container .header-inner
-.btn-group-vertical > a + .btn-group, #competences
+.btn-group-vertical > a + .btn-group, #intro
+.section-container.btn-group-vertical > a + .btn-group, #competences
 .section-container.btn-group-vertical > a + .btn-group,
 .btn-group-vertical > .btn-group + .btn, header .header-container .header-inner
-.btn-group-vertical > .btn-group + a, #competences
+.btn-group-vertical > .btn-group + a, #intro
+.section-container.btn-group-vertical > .btn-group + a, #competences
 .section-container.btn-group-vertical > .btn-group + a,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), header .header-container .header-inner .btn-group-vertical > a:not(:first-child):not(:last-child), #competences .section-container.btn-group-vertical > a:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), header .header-container .header-inner .btn-group-vertical > a:not(:first-child):not(:last-child), #intro .section-container.btn-group-vertical > a:not(:first-child):not(:last-child), #competences .section-container.btn-group-vertical > a:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), header .header-container .header-inner .btn-group-vertical > a:first-child:not(:last-child), #competences .section-container.btn-group-vertical > a:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), header .header-container .header-inner .btn-group-vertical > a:first-child:not(:last-child), #intro .section-container.btn-group-vertical > a:first-child:not(:last-child), #competences .section-container.btn-group-vertical > a:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group-vertical > a:last-child:not(:first-child), #competences .section-container.btn-group-vertical > a:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group-vertical > a:last-child:not(:first-child), #intro .section-container.btn-group-vertical > a:last-child:not(:first-child), #competences .section-container.btn-group-vertical > a:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, #intro .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, #intro .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, #intro .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -5480,25 +5503,28 @@ tbody.collapse.in {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate; }
-  .btn-group-justified > .btn, header .header-container .header-inner .btn-group-justified > a, #competences .section-container.btn-group-justified > a,
+  .btn-group-justified > .btn, header .header-container .header-inner .btn-group-justified > a, #intro .section-container.btn-group-justified > a, #competences .section-container.btn-group-justified > a,
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
-  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group header .header-container .header-inner a, header .header-container .header-inner .btn-group-justified > .btn-group a, .btn-group-justified > .btn-group #competences .section-container > a, #competences .btn-group-justified > .btn-group .section-container > a {
+  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group header .header-container .header-inner a, header .header-container .header-inner .btn-group-justified > .btn-group a, .btn-group-justified > .btn-group #intro .section-container > a, #intro .btn-group-justified > .btn-group .section-container > a, .btn-group-justified > .btn-group #competences .section-container > a, #competences .btn-group-justified > .btn-group .section-container > a {
     width: 100%; }
   .btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], header .header-container .header-inner [data-toggle="buttons"] > a input[type="radio"], #competences .section-container[data-toggle="buttons"] > a input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], header .header-container .header-inner [data-toggle="buttons"] > a input[type="radio"], #intro .section-container[data-toggle="buttons"] > a input[type="radio"], #competences .section-container[data-toggle="buttons"] > a input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], header .header-container .header-inner
-[data-toggle="buttons"] > a input[type="checkbox"], #competences
+[data-toggle="buttons"] > a input[type="checkbox"], #intro
+.section-container[data-toggle="buttons"] > a input[type="checkbox"], #competences
 .section-container[data-toggle="buttons"] > a input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], header .header-container .header-inner
-[data-toggle="buttons"] > .btn-group > a input[type="radio"], #competences
+[data-toggle="buttons"] > .btn-group > a input[type="radio"], #intro
+[data-toggle="buttons"] > .section-container.btn-group > a input[type="radio"], #competences
 [data-toggle="buttons"] > .section-container.btn-group > a input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], header .header-container .header-inner
-[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], #competences
+[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], #intro
+[data-toggle="buttons"] > .section-container.btn-group > a input[type="checkbox"], #competences
 [data-toggle="buttons"] > .section-container.btn-group > a input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -5549,7 +5575,8 @@ tbody.collapse.in {
   .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn, header .header-container .header-inner
-  .input-group-sm > .input-group-btn > a.input-group-addon, #competences
+  .input-group-sm > .input-group-btn > a.input-group-addon, #intro
+  .input-group-sm > .section-container.input-group-btn > a.input-group-addon, #competences
   .input-group-sm > .section-container.input-group-btn > a.input-group-addon {
     padding: 5px 10px;
     font-size: 12px;
@@ -5557,11 +5584,12 @@ tbody.collapse.in {
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn, header .header-container .header-inner
-  .input-group-lg > .input-group-btn > a.input-group-addon, #competences
+  .input-group-lg > .input-group-btn > a.input-group-addon, #intro
+  .input-group-lg > .section-container.input-group-btn > a.input-group-addon, #competences
   .input-group-lg > .section-container.input-group-btn > a.input-group-addon {
     padding: 10px 16px;
     font-size: 18px;
-    border-radius: 40px; }
+    border-radius: 6px; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
@@ -5569,17 +5597,21 @@ tbody.collapse.in {
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn, header .header-container .header-inner
-.input-group-btn:first-child > a, #competences
+.input-group-btn:first-child > a, #intro
+.section-container.input-group-btn:first-child > a, #competences
 .section-container.input-group-btn:first-child > a,
 .input-group-btn:first-child > .btn-group > .btn, header .header-container .header-inner
-.input-group-btn:first-child > .btn-group > a, #competences
+.input-group-btn:first-child > .btn-group > a, #intro
+.input-group-btn:first-child > .section-container.btn-group > a, #competences
 .input-group-btn:first-child > .section-container.btn-group > a,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), header .header-container .header-inner
-.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #competences
+.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #intro
+.section-container.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #competences
 .section-container.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, header .header-container .header-inner
-.input-group-btn:last-child > .btn-group:not(:last-child) > a, #competences
+.input-group-btn:last-child > .btn-group:not(:last-child) > a, #intro
+.input-group-btn:last-child > .section-container.btn-group:not(:last-child) > a, #competences
 .input-group-btn:last-child > .section-container.btn-group:not(:last-child) > a {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
@@ -5590,17 +5622,21 @@ tbody.collapse.in {
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn, header .header-container .header-inner
-.input-group-btn:last-child > a, #competences
+.input-group-btn:last-child > a, #intro
+.section-container.input-group-btn:last-child > a, #competences
 .section-container.input-group-btn:last-child > a,
 .input-group-btn:last-child > .btn-group > .btn, header .header-container .header-inner
-.input-group-btn:last-child > .btn-group > a, #competences
+.input-group-btn:last-child > .btn-group > a, #intro
+.input-group-btn:last-child > .section-container.btn-group > a, #competences
 .input-group-btn:last-child > .section-container.btn-group > a,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child), header .header-container .header-inner
-.input-group-btn:first-child > a:not(:first-child), #competences
+.input-group-btn:first-child > a:not(:first-child), #intro
+.section-container.input-group-btn:first-child > a:not(:first-child), #competences
 .section-container.input-group-btn:first-child > a:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, header .header-container .header-inner
-.input-group-btn:first-child > .btn-group:not(:first-child) > a, #competences
+.input-group-btn:first-child > .btn-group:not(:first-child) > a, #intro
+.input-group-btn:first-child > .section-container.btn-group:not(:first-child) > a, #competences
 .input-group-btn:first-child > .section-container.btn-group:not(:first-child) > a {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -5612,16 +5648,16 @@ tbody.collapse.in {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, header .header-container .header-inner .input-group-btn > a, #competences .section-container.input-group-btn > a {
+  .input-group-btn > .btn, header .header-container .header-inner .input-group-btn > a, #intro .section-container.input-group-btn > a, #competences .section-container.input-group-btn > a {
     position: relative; }
-    .input-group-btn > .btn + .btn, header .header-container .header-inner .input-group-btn > a + .btn, #competences .section-container.input-group-btn > a + .btn, header .header-container .header-inner .input-group-btn > .btn + a, header .header-container .header-inner .input-group-btn > a + a, #competences .section-container.input-group-btn > .btn + a, #competences header .header-container .header-inner .section-container.input-group-btn > a + a, #competences .section-container.input-group-btn > a + a {
+    .input-group-btn > .btn + .btn, header .header-container .header-inner .input-group-btn > a + .btn, #intro .section-container.input-group-btn > a + .btn, #competences .section-container.input-group-btn > a + .btn, header .header-container .header-inner .input-group-btn > .btn + a, header .header-container .header-inner .input-group-btn > a + a, #intro .section-container.input-group-btn > .btn + a, #intro header .header-container .header-inner .section-container.input-group-btn > a + a, #intro .section-container.input-group-btn > a + a, #competences .section-container.input-group-btn > .btn + a, #competences header .header-container .header-inner .section-container.input-group-btn > a + a, #competences .section-container.input-group-btn > a + a {
       margin-left: -1px; }
-    .input-group-btn > .btn:hover, header .header-container .header-inner .input-group-btn > a:hover, #competences .section-container.input-group-btn > a:hover, .input-group-btn > .btn:focus, header .header-container .header-inner .input-group-btn > a:focus, #competences .section-container.input-group-btn > a:focus, .input-group-btn > .btn:active, header .header-container .header-inner .input-group-btn > a:active, #competences .section-container.input-group-btn > a:active {
+    .input-group-btn > .btn:hover, header .header-container .header-inner .input-group-btn > a:hover, #intro .section-container.input-group-btn > a:hover, #competences .section-container.input-group-btn > a:hover, .input-group-btn > .btn:focus, header .header-container .header-inner .input-group-btn > a:focus, #intro .section-container.input-group-btn > a:focus, #competences .section-container.input-group-btn > a:focus, .input-group-btn > .btn:active, header .header-container .header-inner .input-group-btn > a:active, #intro .section-container.input-group-btn > a:active, #competences .section-container.input-group-btn > a:active {
       z-index: 2; }
-  .input-group-btn:first-child > .btn, header .header-container .header-inner .input-group-btn:first-child > a, #competences .section-container.input-group-btn:first-child > a,
+  .input-group-btn:first-child > .btn, header .header-container .header-inner .input-group-btn:first-child > a, #intro .section-container.input-group-btn:first-child > a, #competences .section-container.input-group-btn:first-child > a,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:last-child > .btn, header .header-container .header-inner .input-group-btn:last-child > a, #competences .section-container.input-group-btn:last-child > a,
+  .input-group-btn:last-child > .btn, header .header-container .header-inner .input-group-btn:last-child > a, #intro .section-container.input-group-btn:last-child > a, #competences .section-container.input-group-btn:last-child > a,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
@@ -5781,7 +5817,7 @@ tbody.collapse.in {
     display: table; }
   .navbar-collapse:after {
     clear: both; }
-  .navbar-collapse.in {
+  .navbar-collapse.in, #parcours .timeline li .navbar-collapse.timeline-panel {
     overflow-y: auto; }
   @media (min-width: 768px) {
     .navbar-collapse {
@@ -5793,7 +5829,7 @@ tbody.collapse.in {
         height: auto !important;
         padding-bottom: 0;
         overflow: visible !important; }
-      .navbar-collapse.in {
+      .navbar-collapse.in, #parcours .timeline li .navbar-collapse.timeline-panel {
         overflow-y: visible; }
       .navbar-fixed-top .navbar-collapse,
       .navbar-static-top .navbar-collapse,
@@ -6000,10 +6036,10 @@ tbody.collapse.in {
 .navbar-btn {
   margin-top: 7px;
   margin-bottom: 7px; }
-  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, header .header-container .header-inner .btn-group-sm > a.navbar-btn, #competences .section-container.btn-group-sm > a.navbar-btn {
+  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, header .header-container .header-inner .btn-group-sm > a.navbar-btn, #intro .section-container.btn-group-sm > a.navbar-btn, #competences .section-container.btn-group-sm > a.navbar-btn {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, header .header-container .header-inner .btn-group-xs > a.navbar-btn, #competences .section-container.btn-group-xs > a.navbar-btn {
+  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, header .header-container .header-inner .btn-group-xs > a.navbar-btn, #intro .section-container.btn-group-xs > a.navbar-btn, #competences .section-container.btn-group-xs > a.navbar-btn {
     margin-top: 14px;
     margin-bottom: 14px; }
 
@@ -6222,13 +6258,13 @@ tbody.collapse.in {
 
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 40px;
-  border-top-left-radius: 40px; }
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px; }
 
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 40px;
-  border-top-right-radius: 40px; }
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px; }
 
 .pagination-sm > li > a,
 .pagination-sm > li > span {
@@ -6283,7 +6319,7 @@ tbody.collapse.in {
     background-color: #fff;
     cursor: not-allowed; }
 
-.label, #section2 .competence .details li {
+.label, #competences .section-container .competence .details li {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
@@ -6294,9 +6330,9 @@ tbody.collapse.in {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em; }
-  .label:empty, #section2 .competence .details li:empty {
+  .label:empty, #competences .section-container .competence .details li:empty {
     display: none; }
-  .btn .label, header .header-container .header-inner a .label, #competences .section-container > a .label, .btn #section2 .competence .details li, #section2 .competence .details .btn li, header .header-container .header-inner a #section2 .competence .details li, #section2 .competence .details header .header-container .header-inner a li, #competences .section-container > a #section2 .competence .details li, #section2 .competence .details #competences .section-container > a li {
+  .btn .label, header .header-container .header-inner a .label, #intro .section-container > a .label, #competences .section-container > a .label, .btn #competences .section-container .competence .details li, #competences .section-container .competence .details .btn li, header .header-container .header-inner a #competences .section-container .competence .details li, #competences .section-container .competence .details header .header-container .header-inner a li, #competences #intro .section-container > a .competence .details li, #competences .section-container > a .competence .details li {
     position: relative;
     top: -1px; }
 
@@ -6305,9 +6341,9 @@ a.label:hover, a.label:focus {
   text-decoration: none;
   cursor: pointer; }
 
-.label-default, #section2 .competence .details li {
+.label-default, #competences .section-container .competence .details li {
   background-color: #777777; }
-  .label-default[href]:hover, #section2 .competence .details li[href]:hover, .label-default[href]:focus, #section2 .competence .details li[href]:focus {
+  .label-default[href]:hover, #competences .section-container .competence .details li[href]:hover, .label-default[href]:focus, #competences .section-container .competence .details li[href]:focus {
     background-color: #5e5e5e; }
 
 .label-primary {
@@ -6335,7 +6371,7 @@ a.label:hover, a.label:focus {
   .label-danger[href]:hover, .label-danger[href]:focus {
     background-color: #c9302c; }
 
-.badge {
+.badge, #parcours .timeline li .timeline-badge {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
@@ -6348,29 +6384,39 @@ a.label:hover, a.label:focus {
   text-align: center;
   background-color: #777777;
   border-radius: 10px; }
-  .badge:empty {
+  .badge:empty, #parcours .timeline li .timeline-badge:empty {
     display: none; }
-  .btn .badge, header .header-container .header-inner a .badge, #competences .section-container > a .badge {
+  .btn .badge, header .header-container .header-inner a .badge, #intro .section-container > a .badge, #competences .section-container > a .badge, .btn #parcours .timeline li .timeline-badge, #parcours .timeline li .btn .timeline-badge, header .header-container .header-inner a #parcours .timeline li .timeline-badge, #parcours .timeline li header .header-container .header-inner a .timeline-badge, #intro .section-container > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro .section-container > a .timeline-badge, #competences .section-container > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences .section-container > a .timeline-badge {
     position: relative;
     top: -1px; }
-  .btn-xs .badge, .btn-group-xs > .btn .badge, header .header-container .header-inner .btn-group-xs > a .badge, #competences .section-container.btn-group-xs > a .badge,
+  .btn-xs .badge, .btn-group-xs > .btn .badge, header .header-container .header-inner .btn-group-xs > a .badge, #intro .section-container.btn-group-xs > a .badge, #competences .section-container.btn-group-xs > a .badge, .btn-xs #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-xs .timeline-badge, .btn-group-xs > .btn #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-group-xs > .btn .timeline-badge, header .header-container .header-inner .btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li header .header-container .header-inner .btn-group-xs > a .timeline-badge, #intro .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro .section-container.btn-group-xs > a .timeline-badge, #competences .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences .section-container.btn-group-xs > a .timeline-badge,
   .btn-group-xs > .btn .badge, header .header-container .header-inner
-  .btn-group-xs > a .badge, #competences
-  .section-container.btn-group-xs > a .badge {
+  .btn-group-xs > a .badge, #intro
+  .section-container.btn-group-xs > a .badge, #competences
+  .section-container.btn-group-xs > a .badge,
+  .btn-group-xs > .btn #parcours .timeline li .timeline-badge, #parcours .timeline li
+  .btn-group-xs > .btn .timeline-badge, header .header-container .header-inner
+  .btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li header .header-container .header-inner
+  .btn-group-xs > a .timeline-badge, #intro
+  .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro
+  .section-container.btn-group-xs > a .timeline-badge, #competences
+  .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences
+  .section-container.btn-group-xs > a .timeline-badge {
     top: 0;
     padding: 1px 5px; }
-  .list-group-item.active > .badge,
-  .nav-pills > .active > a > .badge {
+  .list-group-item.active > .badge, #parcours .timeline li .list-group-item.active > .timeline-badge,
+  .nav-pills > .active > a > .badge, #parcours .timeline li
+  .nav-pills > .active > a > .timeline-badge {
     color: #337ab7;
     background-color: #fff; }
-  .list-group-item > .badge {
+  .list-group-item > .badge, #parcours .timeline li .list-group-item > .timeline-badge {
     float: right; }
-  .list-group-item > .badge + .badge {
+  .list-group-item > .badge + .badge, #parcours .timeline li .list-group-item > .timeline-badge + .badge, #parcours .timeline li .list-group-item > .badge + .timeline-badge, #parcours .timeline li .list-group-item > .timeline-badge + .timeline-badge {
     margin-right: 5px; }
-  .nav-pills > li > a > .badge {
+  .nav-pills > li > a > .badge, #parcours .timeline .nav-pills > li > a > .timeline-badge {
     margin-left: 3px; }
 
-a.badge:hover, a.badge:focus {
+a.badge:hover, #parcours .timeline li a.timeline-badge:hover, a.badge:focus, #parcours .timeline li a.timeline-badge:focus {
   color: #fff;
   text-decoration: none;
   cursor: pointer; }
@@ -6392,7 +6438,7 @@ a.badge:hover, a.badge:focus {
     border-top-color: #d5d5d5; }
   .container .jumbotron, section .section-container .jumbotron,
   .container-fluid .jumbotron {
-    border-radius: 40px;
+    border-radius: 6px;
     padding-left: 15px;
     padding-right: 15px; }
   .jumbotron .container, .jumbotron section .section-container, section .jumbotron .section-container {
@@ -6510,7 +6556,7 @@ a.thumbnail.active {
   to {
     background-position: 0 0; } }
 
-.progress, #section2 .competence .level .outer {
+.progress, #competences .section-container .competence .level .outer {
   overflow: hidden;
   height: 22px;
   margin-bottom: 22px;
@@ -6519,7 +6565,7 @@ a.thumbnail.active {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
 
-.progress-bar, #section2 .competence .level .outer .inner {
+.progress-bar, #competences .section-container .competence .level .outer .inner {
   float: left;
   width: 0%;
   height: 100%;
@@ -6534,24 +6580,24 @@ a.thumbnail.active {
   -o-transition: width 0.6s ease;
   transition: width 0.6s ease; }
 
-.progress-striped .progress-bar, .progress-striped #section2 .competence .level .outer .inner, #section2 .competence .level .outer .progress-striped .inner,
+.progress-striped .progress-bar, .progress-striped #competences .section-container .competence .level .outer .inner, #competences .section-container .competence .level .outer .progress-striped .inner,
 .progress-bar-striped,
-#section2 .competence .level .outer .inner {
+#competences .section-container .competence .level .outer .inner {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px; }
 
-.progress.active .progress-bar, #section2 .competence .level .active.outer .progress-bar, .progress.active #section2 .competence .level .outer .inner, #section2 .competence .level .outer .progress.active .inner, #section2 .competence .level .active.outer .inner,
+.progress.active .progress-bar, #competences .section-container .competence .level .active.outer .progress-bar, .progress.active #competences .section-container .competence .level .outer .inner, #competences .section-container .competence .level .outer .progress.active .inner, #competences .section-container .competence .level .active.outer .inner,
 .progress-bar.active,
-#section2 .competence .level .outer .active.inner {
+#competences .section-container .competence .level .outer .active.inner {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
   -o-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite; }
 
-.progress-bar-success, #section2 .competence .level .outer .inner {
+.progress-bar-success, #competences .section-container .competence .level .outer .inner {
   background-color: #5cb85c; }
-  .progress-striped .progress-bar-success, .progress-striped #section2 .competence .level .outer .inner, #section2 .competence .level .outer .progress-striped .inner {
+  .progress-striped .progress-bar-success, .progress-striped #competences .section-container .competence .level .outer .inner, #competences .section-container .competence .level .outer .progress-striped .inner {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
@@ -7010,7 +7056,7 @@ button.list-group-item-danger {
     border-color: #ddd; }
     .panel-default > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #ddd; }
-    .panel-default > .panel-heading .badge {
+    .panel-default > .panel-heading .badge, .panel-default > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-default > .panel-heading .timeline-badge {
       color: #f5f5f5;
       background-color: #333333; }
   .panel-default > .panel-footer + .panel-collapse > .panel-body {
@@ -7024,7 +7070,7 @@ button.list-group-item-danger {
     border-color: #337ab7; }
     .panel-primary > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #337ab7; }
-    .panel-primary > .panel-heading .badge {
+    .panel-primary > .panel-heading .badge, .panel-primary > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-primary > .panel-heading .timeline-badge {
       color: #337ab7;
       background-color: #fff; }
   .panel-primary > .panel-footer + .panel-collapse > .panel-body {
@@ -7038,7 +7084,7 @@ button.list-group-item-danger {
     border-color: #d6e9c6; }
     .panel-success > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #d6e9c6; }
-    .panel-success > .panel-heading .badge {
+    .panel-success > .panel-heading .badge, .panel-success > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-success > .panel-heading .timeline-badge {
       color: #dff0d8;
       background-color: #3c763d; }
   .panel-success > .panel-footer + .panel-collapse > .panel-body {
@@ -7052,7 +7098,7 @@ button.list-group-item-danger {
     border-color: #bce8f1; }
     .panel-info > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #bce8f1; }
-    .panel-info > .panel-heading .badge {
+    .panel-info > .panel-heading .badge, .panel-info > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-info > .panel-heading .timeline-badge {
       color: #d9edf7;
       background-color: #31708f; }
   .panel-info > .panel-footer + .panel-collapse > .panel-body {
@@ -7066,7 +7112,7 @@ button.list-group-item-danger {
     border-color: #faebcc; }
     .panel-warning > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #faebcc; }
-    .panel-warning > .panel-heading .badge {
+    .panel-warning > .panel-heading .badge, .panel-warning > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-warning > .panel-heading .timeline-badge {
       color: #fcf8e3;
       background-color: #8a6d3b; }
   .panel-warning > .panel-footer + .panel-collapse > .panel-body {
@@ -7080,7 +7126,7 @@ button.list-group-item-danger {
     border-color: #ebccd1; }
     .panel-danger > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #ebccd1; }
-    .panel-danger > .panel-heading .badge {
+    .panel-danger > .panel-heading .badge, .panel-danger > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-danger > .panel-heading .timeline-badge {
       color: #f2dede;
       background-color: #a94442; }
   .panel-danger > .panel-footer + .panel-collapse > .panel-body {
@@ -7126,7 +7172,7 @@ button.list-group-item-danger {
 
 .well-lg {
   padding: 24px;
-  border-radius: 40px; }
+  border-radius: 6px; }
 
 .well-sm {
   padding: 9px;
@@ -7169,7 +7215,7 @@ button.close {
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
   outline: 0; }
-  .modal.fade .modal-dialog {
+  .modal.fade .modal-dialog, #parcours .timeline li .modal.timeline-panel .modal-dialog {
     -webkit-transform: translate(0, -25%);
     -ms-transform: translate(0, -25%);
     -o-transform: translate(0, -25%);
@@ -7178,7 +7224,7 @@ button.close {
     -moz-transition: -moz-transform 0.3s ease-out;
     -o-transition: -o-transform 0.3s ease-out;
     transition: transform 0.3s ease-out; }
-  .modal.in .modal-dialog {
+  .modal.in .modal-dialog, #parcours .timeline li .modal.timeline-panel .modal-dialog {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
@@ -7198,7 +7244,7 @@ button.close {
   background-color: #fff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 40px;
+  border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
@@ -7212,10 +7258,10 @@ button.close {
   left: 0;
   z-index: 1040;
   background-color: #000; }
-  .modal-backdrop.fade {
+  .modal-backdrop.fade, #parcours .timeline li .modal-backdrop.timeline-panel {
     opacity: 0;
     filter: alpha(opacity=0); }
-  .modal-backdrop.in {
+  .modal-backdrop.in, #parcours .timeline li .modal-backdrop.timeline-panel {
     opacity: 0.5;
     filter: alpha(opacity=50); }
 
@@ -7248,10 +7294,10 @@ button.close {
     display: table; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer a + .btn, .modal-footer #competences .section-container > a + .btn, #competences .modal-footer .section-container > a + .btn, .modal-footer header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn + a, .modal-footer header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer a + a, .modal-footer #competences header .header-container .header-inner .section-container > a + a, .modal-footer #competences .section-container > .btn + a, #competences .modal-footer .section-container > .btn + a, #competences .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #competences .section-container > a + a, #competences .modal-footer .section-container > a + a {
+  .modal-footer .btn + .btn, .modal-footer header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer a + .btn, .modal-footer #intro .section-container > a + .btn, #intro .modal-footer .section-container > a + .btn, .modal-footer #competences .section-container > a + .btn, #competences .modal-footer .section-container > a + .btn, .modal-footer header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn + a, .modal-footer header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer a + a, .modal-footer #intro header .header-container .header-inner .section-container > a + a, .modal-footer #competences header .header-container .header-inner .section-container > a + a, .modal-footer #intro .section-container > .btn + a, #intro .modal-footer .section-container > .btn + a, #intro .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #intro .section-container > a + a, #intro .modal-footer .section-container > a + a, .modal-footer #competences .section-container > .btn + a, #competences .modal-footer .section-container > .btn + a, #competences .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #competences .section-container > a + a, #competences .modal-footer .section-container > a + a {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer .btn-group a + .btn, .modal-footer .btn-group #competences .section-container > a + .btn, #competences .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn-group .btn + a, .modal-footer .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer .btn-group a + a, .modal-footer .btn-group #competences header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences .section-container > .btn + a, #competences .modal-footer .btn-group .section-container > .btn + a, #competences .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences .section-container > a + a, #competences .modal-footer .btn-group .section-container > a + a {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer .btn-group a + .btn, .modal-footer .btn-group #intro .section-container > a + .btn, #intro .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group #competences .section-container > a + .btn, #competences .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn-group .btn + a, .modal-footer .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer .btn-group a + a, .modal-footer .btn-group #intro header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #intro .section-container > .btn + a, #intro .modal-footer .btn-group .section-container > .btn + a, #intro .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #intro .section-container > a + a, #intro .modal-footer .btn-group .section-container > a + a, .modal-footer .btn-group #competences .section-container > .btn + a, #competences .modal-footer .btn-group .section-container > .btn + a, #competences .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences .section-container > a + a, #competences .modal-footer .btn-group .section-container > a + a {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -7299,19 +7345,19 @@ button.close {
   font-size: 12px;
   opacity: 0;
   filter: alpha(opacity=0); }
-  .tooltip.in {
+  .tooltip.in, #parcours .timeline li .tooltip.timeline-panel {
     opacity: 0.9;
     filter: alpha(opacity=90); }
   .tooltip.top {
     margin-top: -3px;
     padding: 5px 0; }
-  .tooltip.right {
+  .tooltip.right, #parcours .timeline li:nth-of-type(even) .tooltip.timeline-panel {
     margin-left: 3px;
     padding: 0 5px; }
   .tooltip.bottom {
     margin-top: 3px;
     padding: 5px 0; }
-  .tooltip.left {
+  .tooltip.left, #parcours .timeline li:nth-of-type(odd) .tooltip.timeline-panel {
     margin-left: -3px;
     padding: 0 5px; }
 
@@ -7351,14 +7397,14 @@ button.close {
   border-width: 5px 5px 0;
   border-top-color: #000; }
 
-.tooltip.right .tooltip-arrow {
+.tooltip.right .tooltip-arrow, #parcours .timeline li:nth-of-type(even) .tooltip.timeline-panel .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
   border-right-color: #000; }
 
-.tooltip.left .tooltip-arrow {
+.tooltip.left .tooltip-arrow, #parcours .timeline li:nth-of-type(odd) .tooltip.timeline-panel .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
@@ -7386,7 +7432,7 @@ button.close {
   border-width: 0 5px 5px;
   border-bottom-color: #000; }
 
-.popover {
+.popover, #parcours .timeline li .timeline-panel {
   position: absolute;
   top: 0;
   left: 0;
@@ -7414,30 +7460,30 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 40px;
+  border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-  .popover.top {
+  .popover.top, #parcours .timeline li .top.timeline-panel {
     margin-top: -10px; }
-  .popover.right {
+  .popover.right, #parcours .timeline li:nth-of-type(even) .timeline-panel, #parcours .timeline li .right.timeline-panel {
     margin-left: 10px; }
-  .popover.bottom {
+  .popover.bottom, #parcours .timeline li .bottom.timeline-panel {
     margin-top: 10px; }
-  .popover.left {
+  .popover.left, #parcours .timeline li:nth-of-type(odd) .timeline-panel, #parcours .timeline li .left.timeline-panel {
     margin-left: -10px; }
 
-.popover-title {
+.popover-title, #parcours .timeline li .timeline-panel .timeline-heading {
   margin: 0;
   padding: 8px 14px;
   font-size: 14px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 39px 39px 0 0; }
+  border-radius: 5px 5px 0 0; }
 
-.popover-content {
+.popover-content, #parcours .timeline li .timeline-panel .timeline-body {
   padding: 9px 14px; }
 
-.popover > .arrow, .popover > .arrow:after {
+.popover > .arrow, #parcours .timeline li .timeline-panel > .arrow, .popover > .arrow:after, #parcours .timeline li .timeline-panel > .arrow:after {
   position: absolute;
   display: block;
   width: 0;
@@ -7445,63 +7491,63 @@ button.close {
   border-color: transparent;
   border-style: solid; }
 
-.popover > .arrow {
+.popover > .arrow, #parcours .timeline li .timeline-panel > .arrow {
   border-width: 11px; }
 
-.popover > .arrow:after {
+.popover > .arrow:after, #parcours .timeline li .timeline-panel > .arrow:after {
   border-width: 10px;
   content: ""; }
 
-.popover.top > .arrow {
+.popover.top > .arrow, #parcours .timeline li .top.timeline-panel > .arrow {
   left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
   border-top-color: #999999;
   border-top-color: rgba(0, 0, 0, 0.25);
   bottom: -11px; }
-  .popover.top > .arrow:after {
+  .popover.top > .arrow:after, #parcours .timeline li .top.timeline-panel > .arrow:after {
     content: " ";
     bottom: 1px;
     margin-left: -10px;
     border-bottom-width: 0;
     border-top-color: #fff; }
 
-.popover.right > .arrow {
+.popover.right > .arrow, #parcours .timeline li:nth-of-type(even) .timeline-panel > .arrow, #parcours .timeline li .right.timeline-panel > .arrow {
   top: 50%;
   left: -11px;
   margin-top: -11px;
   border-left-width: 0;
   border-right-color: #999999;
   border-right-color: rgba(0, 0, 0, 0.25); }
-  .popover.right > .arrow:after {
+  .popover.right > .arrow:after, #parcours .timeline li:nth-of-type(even) .timeline-panel > .arrow:after, #parcours .timeline li .right.timeline-panel > .arrow:after {
     content: " ";
     left: 1px;
     bottom: -10px;
     border-left-width: 0;
     border-right-color: #fff; }
 
-.popover.bottom > .arrow {
+.popover.bottom > .arrow, #parcours .timeline li .bottom.timeline-panel > .arrow {
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
   border-bottom-color: #999999;
   border-bottom-color: rgba(0, 0, 0, 0.25);
   top: -11px; }
-  .popover.bottom > .arrow:after {
+  .popover.bottom > .arrow:after, #parcours .timeline li .bottom.timeline-panel > .arrow:after {
     content: " ";
     top: 1px;
     margin-left: -10px;
     border-top-width: 0;
     border-bottom-color: #fff; }
 
-.popover.left > .arrow {
+.popover.left > .arrow, #parcours .timeline li:nth-of-type(odd) .timeline-panel > .arrow, #parcours .timeline li .left.timeline-panel > .arrow {
   top: 50%;
   right: -11px;
   margin-top: -11px;
   border-right-width: 0;
   border-left-color: #999999;
   border-left-color: rgba(0, 0, 0, 0.25); }
-  .popover.left > .arrow:after {
+  .popover.left > .arrow:after, #parcours .timeline li:nth-of-type(odd) .timeline-panel > .arrow:after, #parcours .timeline li .left.timeline-panel > .arrow:after {
     content: " ";
     right: 1px;
     border-right-width: 0;
@@ -7539,15 +7585,15 @@ button.close {
         -webkit-perspective: 1000px;
         -moz-perspective: 1000px;
         perspective: 1000px; }
-        .carousel-inner > .item.next, .carousel-inner > .item.active.right {
+        .carousel-inner > .item.next, .carousel-inner > .item.active.right, #parcours .timeline li:nth-of-type(even) .carousel-inner > .item.active.timeline-panel {
           -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
           left: 0; }
-        .carousel-inner > .item.prev, .carousel-inner > .item.active.left {
+        .carousel-inner > .item.prev, .carousel-inner > .item.active.left, #parcours .timeline li:nth-of-type(odd) .carousel-inner > .item.active.timeline-panel {
           -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
           left: 0; }
-        .carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item.active {
+        .carousel-inner > .item.next.left, #parcours .timeline li:nth-of-type(odd) .carousel-inner > .item.next.timeline-panel, .carousel-inner > .item.prev.right, #parcours .timeline li:nth-of-type(even) .carousel-inner > .item.prev.timeline-panel, .carousel-inner > .item.active {
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
           left: 0; } }
@@ -7566,12 +7612,13 @@ button.close {
     left: 100%; }
   .carousel-inner > .prev {
     left: -100%; }
-  .carousel-inner > .next.left,
-  .carousel-inner > .prev.right {
+  .carousel-inner > .next.left, #parcours .timeline li:nth-of-type(odd) .carousel-inner > .next.timeline-panel,
+  .carousel-inner > .prev.right, #parcours .timeline li:nth-of-type(even)
+  .carousel-inner > .prev.timeline-panel {
     left: 0; }
-  .carousel-inner > .active.left {
+  .carousel-inner > .active.left, #parcours .timeline li:nth-of-type(odd) .carousel-inner > .active.timeline-panel {
     left: -100%; }
-  .carousel-inner > .active.right {
+  .carousel-inner > .active.right, #parcours .timeline li:nth-of-type(even) .carousel-inner > .active.timeline-panel {
     left: 100%; }
 
 .carousel-control {
@@ -7587,13 +7634,13 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background-color: transparent; }
-  .carousel-control.left {
+  .carousel-control.left, #parcours .timeline li:nth-of-type(odd) .carousel-control.timeline-panel {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
-  .carousel-control.right {
+  .carousel-control.right, #parcours .timeline li:nth-of-type(even) .carousel-control.timeline-panel {
     left: auto;
     right: 0;
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
@@ -7673,7 +7720,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption header .header-container .header-inner a, header .header-container .header-inner .carousel-caption a, .carousel-caption #competences .section-container > a, #competences .carousel-caption .section-container > a {
+  .carousel-caption .btn, .carousel-caption header .header-container .header-inner a, header .header-container .header-inner .carousel-caption a, .carousel-caption #intro .section-container > a, #intro .carousel-caption .section-container > a, .carousel-caption #competences .section-container > a, #competences .carousel-caption .section-container > a {
     text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -7948,36 +7995,89 @@ header {
         color: #fff; }
 
 section {
-  padding: 80px 0;
+  padding: 40px 0;
   background-size: cover; }
+  section h1 {
+    margin: 11px 0 22px; }
   section .section-container {
     color: white; }
     section .section-container p a {
       color: white;
       text-decoration: underline; }
 
-#competences {
+#intro {
   background-color: #2a9643; }
-  #competences .section-container > a {
+  #intro .section-container > a {
     background-color: #222222;
     color: #fff; }
 
-#section2 {
+#competences {
   background-color: #222222;
   background-image: url("http://lorempixel.com/g/800/800/abstract/2"); }
-  #section2 .competence {
+  #competences .section-container h1 {
+    color: #fff; }
+  #competences .section-container .competence {
     background-color: rgba(34, 34, 34, 0.8);
     margin: 20px 0;
     padding: 10px; }
-    #section2 .competence h2 {
+    #competences .section-container .competence h2 {
       clear: both; }
-    #section2 .competence.php > .level > .outer > .inner {
+    #competences .section-container .competence.php > .level > .outer > .inner {
       width: 80%; }
-    #section2 .competence.js > .level > .outer > .inner {
-      width: 70%; }
-    #section2 .competence.htmlcss > .level > .outer > .inner {
+    #competences .section-container .competence.htmlcssjs > .level > .outer > .inner {
       width: 90%; }
-    #section2 .competence .details li a {
+    #competences .section-container .competence .details li a {
       color: white; }
-    #section2 .competence .description {
+    #competences .section-container .competence .description {
       clear: both; }
+  #competences .section-container > a {
+    background-color: #ffffff;
+    color: #333333; }
+
+#parcours {
+  background-color: #ffffff;
+  color: #333333;
+  position: relative; }
+  #parcours h1 {
+    color: #333333; }
+  #parcours .timeline {
+    color: #000000; }
+    #parcours .timeline:before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 3px;
+      background-color: #eeeeee;
+      left: 50%;
+      margin-left: -1.5px; }
+    #parcours .timeline li {
+      position: relative;
+      margin: 0;
+      clear: both;
+      width: 100%; }
+      #parcours .timeline li:nth-of-type(even) .timeline-panel {
+        float: right; }
+      #parcours .timeline li .timeline-badge {
+        position: absolute;
+        left: 50%;
+        background-color: white;
+        color: gray;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 30px;
+        margin-left: -20px;
+        top: 50%;
+        margin-top: -20px;
+        border: solid 1px #cccccc; }
+        #parcours .timeline li .timeline-badge .glyphicon {
+          width: 20px;
+          height: 20px; }
+      #parcours .timeline li .timeline-panel {
+        display: block;
+        position: relative;
+        max-width: none;
+        width: 45%; }
+        #parcours .timeline li .timeline-panel .timeline-heading .time {
+          color: #999999;
+          float: right; }

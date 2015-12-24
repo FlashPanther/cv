@@ -1,12 +1,15 @@
 // Core variables and mixins
 
-$competencesBgColor: #2a9643;
+$introBgColor: #2a9643;
+$introColor: #fff;
+
+$competencesBgColor: #222222;
 $competencesColor: #fff;
 
-$section2BgColor: #222222;
-$section2Color: #fff;
+$parcoursBgColor: #ffffff;
+$parcoursColor: #333333;
 
-$border-radius-large:   40px !default;
+//$border-radius-large:   40px !default;
 $line-height-base:        22/14 !default;
 
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -51,69 +54,161 @@ header{
         margin-top: 80px;
         @extend .btn;
         @extend .btn-lg;
-        background-color: $competencesBgColor;
-        color: $competencesColor;
+        background-color: $introBgColor;
+        color: $introColor;
       }
     }
   }
 }
 
 section{
-  padding: 80px 0;
+  padding: 40px 0;
   background-size: cover;
+  h1{
+    margin: 11px 0 22px;
+  }
   .section-container{
     @extend .container;
     color: white;
     p a {color: white; text-decoration: underline}
   }
 }
-#competences{
-  background-color: $competencesBgColor;
+#intro{
+  background-color: $introBgColor;
   .section-container>a{
     @extend .btn;
     @extend .btn-lg;
-    background-color: $section2BgColor;
-    color: $section2Color;
+    background-color: $competencesBgColor;
+    color: $competencesColor;
   }
 }
-#section2{
-  background-color: $section2BgColor;
+#competences{
+  background-color: $competencesBgColor;
   background-image: url('http://lorempixel.com/g/800/800/abstract/2');
-  .competence{
-    background-color: transparentize($section2BgColor, 0.2);
-    margin: 20px 0;
-    padding: 10px;
-    @extend .row;
-    h2{
-      clear: both;
-      @extend .col-xs-12;
+  .section-container{
+    h1{
+      color: $competencesColor;
     }
-    .level{
-      @extend .col-md-6;
-      .outer{
-        @extend .progress;
-        .inner{
-          @extend .progress-bar;
-          @extend .progress-bar-success;
-          @extend .progress-bar-striped;
+    .competence{
+      background-color: transparentize($competencesBgColor, 0.2);
+      margin: 20px 0;
+      padding: 10px;
+      @extend .row;
+      h2{
+        clear: both;
+        @extend .col-xs-12;
+      }
+      .level{
+        @extend .col-md-6;
+        .outer{
+          @extend .progress;
+          .inner{
+            @extend .progress-bar;
+            @extend .progress-bar-success;
+            @extend .progress-bar-striped;
+          }
         }
       }
-    }
-    &.php>.level>.outer>.inner{width: 80%}
-    &.js>.level>.outer>.inner{width:   70%;}
-    &.htmlcss>.level>.outer>.inner{width: 90%;}
-    .details{
-      @extend .col-md-6;
-      @extend .list-unstyled;
-      li{
-        @extend .label;
-        @extend .label-default;
-        a{color: white;}
+      &.php>.level>.outer>.inner{width: 80%}
+      &.htmlcssjs>.level>.outer>.inner{width: 90%;}
+      .details{
+        @extend .col-md-6;
+        @extend .list-unstyled;
+        li{
+          @extend .label;
+          @extend .label-default;
+          a{color: white;}
+        }
+      }
+      .description{
+        clear: both;
+        @extend .col-md-12;
       }
     }
-    .description{
+    >a{
+      @extend .btn;
+      @extend .btn-lg;
+      background-color: $parcoursBgColor;
+      color: $parcoursColor;
+    }
+  }
+}
+
+#parcours{
+  h1{
+    color: $parcoursColor;
+  }
+  background-color: $parcoursBgColor;
+  color: $parcoursColor;
+  position: relative;
+  .timeline{
+    &:before{
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 3px;
+      background-color: #eeeeee;
+      left: 50%;
+      margin-left: -1.5px;
+    }
+    color: #000000;
+    @extend .list-unstyled;
+    li{
+      @extend .row;
+      position: relative;
+      margin: 0;
       clear: both;
-      @extend .col-md-12;
+      width: 100%;
+      &:nth-of-type(odd){
+        .timeline-panel{
+          @extend .left;
+        }
+      }
+      &:nth-of-type(even){
+        .timeline-panel{
+          float: right;
+          @extend .right;
+        }
+      }
+      .timeline-badge{
+        @extend .badge;
+        position: absolute;
+        left: 50%;
+        background-color: white;
+        color: lighten(#000000, 50);
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 30px;
+        margin-left: -20px;
+        top: 50%;
+        margin-top: -20px;
+        border: solid 1px lighten(#000000, 80);
+        .glyphicon{
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .timeline-panel{
+        @extend .popover;
+        @extend .fade;
+        @extend .in;
+        display: block;
+        position: relative;
+        max-width: none;
+        width: 45%;
+        .timeline-heading{
+          @extend .popover-title;
+          h2{}
+          .time{
+            color: #999999;
+            float: right;
+          }
+        }
+        .timeline-body{
+          @extend .popover-content;
+        }
+      }
     }
   }
 }
