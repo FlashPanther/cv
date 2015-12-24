@@ -2240,10 +2240,11 @@ th {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .btn > .caret, header .header-container .header-inner a > .caret, #intro .section-container > a > .caret, #competences .section-container > a > .caret,
+  .btn > .caret, header .header-container .header-inner a > .caret, #intro .section-container > a > .caret, #competences .section-container > a > .caret, #parcours .section-container > a > .caret,
   .dropup > .btn > .caret, header .header-container .header-inner
   .dropup > a > .caret, #intro
   .section-container.dropup > a > .caret, #competences
+  .section-container.dropup > a > .caret, #parcours
   .section-container.dropup > a > .caret {
     border-top-color: #000 !important; }
   .label, #competences .section-container .competence .details li {
@@ -2259,10 +2260,10 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("fonts/glyphicons-halflings-regular.eot");
+  src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("fonts/glyphicons-halflings-regular.woff") format("woff"), url("fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
-.glyphicon {
+.glyphicon, a > span.down, #parcours .timeline li .timeline-badge .icon {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -2328,7 +2329,7 @@ th {
 .glyphicon-th-list:before {
   content: "\e012"; }
 
-.glyphicon-ok:before {
+.glyphicon-ok:before, #parcours .timeline li .timeline-badge .icon:before {
   content: "\e013"; }
 
 .glyphicon-remove:before {
@@ -2619,7 +2620,7 @@ th {
 .glyphicon-chevron-up:before {
   content: "\e113"; }
 
-.glyphicon-chevron-down:before {
+.glyphicon-chevron-down:before, a > span.down:before {
   content: "\e114"; }
 
 .glyphicon-retweet:before {
@@ -3551,22 +3552,22 @@ pre {
   .container-fluid:after {
     clear: both; }
 
-.row, #competences .section-container .competence, #parcours .timeline li {
+.row, #competences .section-container .competence .inner, #parcours .timeline li {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, #competences .section-container .competence:before, #parcours .timeline li:before, .row:after, #competences .section-container .competence:after, #parcours .timeline li:after {
+  .row:before, #competences .section-container .competence .inner:before, #parcours .timeline li:before, .row:after, #competences .section-container .competence .inner:after, #parcours .timeline li:after {
     content: " ";
     display: table; }
-  .row:after, #competences .section-container .competence:after, #parcours .timeline li:after {
+  .row:after, #competences .section-container .competence .inner:after, #parcours .timeline li:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #competences .section-container .competence .level, #competences .section-container .competence .details, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #competences .section-container .competence h2, .col-sm-12, .col-md-12, #competences .section-container .competence .description, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #competences .section-container .competence, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #competences .section-container .competence .inner, #competences .section-container .competence h2, #competences .section-container .competence .level, #competences .section-container .competence .details, .col-sm-12, .col-md-12, #competences .section-container .competence .description, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #competences .section-container .competence h2 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #competences .section-container .competence .inner, #competences .section-container .competence h2, #competences .section-container .competence .level, #competences .section-container .competence .details {
   float: left; }
 
 .col-xs-1 {
@@ -3602,7 +3603,7 @@ pre {
 .col-xs-11 {
   width: 91.66667%; }
 
-.col-xs-12, #competences .section-container .competence h2 {
+.col-xs-12, #competences .section-container .competence .inner, #competences .section-container .competence h2, #competences .section-container .competence .level, #competences .section-container .competence .details {
   width: 100%; }
 
 .col-xs-pull-0 {
@@ -3829,7 +3830,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, #competences .section-container .competence .level, #competences .section-container .competence .details, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #competences .section-container .competence .description {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, #competences .section-container .competence, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #competences .section-container .competence .description {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
@@ -3841,7 +3842,7 @@ pre {
     width: 33.33333%; }
   .col-md-5 {
     width: 41.66667%; }
-  .col-md-6, #competences .section-container .competence .level, #competences .section-container .competence .details {
+  .col-md-6, #competences .section-container .competence {
     width: 50%; }
   .col-md-7 {
     width: 58.33333%; }
@@ -4499,11 +4500,13 @@ fieldset[disabled]
   .input-group-lg > .input-group-btn > .form-control-static.btn, header .header-container .header-inner
   .input-group-lg > .input-group-btn > a.form-control-static, #intro
   .input-group-lg > .section-container.input-group-btn > a.form-control-static, #competences
+  .input-group-lg > .section-container.input-group-btn > a.form-control-static, #parcours
   .input-group-lg > .section-container.input-group-btn > a.form-control-static, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, header .header-container .header-inner
   .input-group-sm > .input-group-btn > a.form-control-static, #intro
   .input-group-sm > .section-container.input-group-btn > a.form-control-static, #competences
+  .input-group-sm > .section-container.input-group-btn > a.form-control-static, #parcours
   .input-group-sm > .section-container.input-group-btn > a.form-control-static {
     padding-left: 0;
     padding-right: 0; }
@@ -4513,6 +4516,7 @@ fieldset[disabled]
 .input-group-sm > .input-group-btn > .btn, header .header-container .header-inner
 .input-group-sm > .input-group-btn > a, #intro
 .input-group-sm > .section-container.input-group-btn > a, #competences
+.input-group-sm > .section-container.input-group-btn > a, #parcours
 .input-group-sm > .section-container.input-group-btn > a {
   height: 30px;
   padding: 5px 10px;
@@ -4562,6 +4566,7 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-btn > .btn, header .header-container .header-inner
 .input-group-lg > .input-group-btn > a, #intro
 .input-group-lg > .section-container.input-group-btn > a, #competences
+.input-group-lg > .section-container.input-group-btn > a, #parcours
 .input-group-lg > .section-container.input-group-btn > a {
   height: 46px;
   padding: 10px 16px;
@@ -4628,6 +4633,7 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback, header .header-container .header-inner
 .input-group-lg > .input-group-btn > a + .form-control-feedback, #intro
 .input-group-lg > .section-container.input-group-btn > a + .form-control-feedback, #competences
+.input-group-lg > .section-container.input-group-btn > a + .form-control-feedback, #parcours
 .input-group-lg > .section-container.input-group-btn > a + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
@@ -4640,6 +4646,7 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback, header .header-container .header-inner
 .input-group-sm > .input-group-btn > a + .form-control-feedback, #intro
 .input-group-sm > .section-container.input-group-btn > a + .form-control-feedback, #competences
+.input-group-sm > .section-container.input-group-btn > a + .form-control-feedback, #parcours
 .input-group-sm > .section-container.input-group-btn > a + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
@@ -4825,7 +4832,7 @@ select[multiple].input-lg,
     padding-top: 6px;
     font-size: 12px; } }
 
-.btn, header .header-container .header-inner a, #intro .section-container > a, #competences .section-container > a {
+.btn, header .header-container .header-inner a, #intro .section-container > a, #competences .section-container > a, #parcours .section-container > a {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -4844,25 +4851,27 @@ select[multiple].input-lg,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .btn:focus, header .header-container .header-inner a:focus, #intro .section-container > a:focus, #competences .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #intro .section-container > a.focus, #competences .section-container > a.focus, .btn:active:focus, header .header-container .header-inner a:active:focus, #intro .section-container > a:active:focus, #competences .section-container > a:active:focus, .btn:active.focus, header .header-container .header-inner a:active.focus, #intro .section-container > a:active.focus, #competences .section-container > a:active.focus, .btn.active:focus, header .header-container .header-inner a.active:focus, #intro .section-container > a.active:focus, #competences .section-container > a.active:focus, .btn.active.focus, header .header-container .header-inner a.active.focus, #intro .section-container > a.active.focus, #competences .section-container > a.active.focus {
+  .btn:focus, header .header-container .header-inner a:focus, #intro .section-container > a:focus, #competences .section-container > a:focus, #parcours .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #intro .section-container > a.focus, #competences .section-container > a.focus, #parcours .section-container > a.focus, .btn:active:focus, header .header-container .header-inner a:active:focus, #intro .section-container > a:active:focus, #competences .section-container > a:active:focus, #parcours .section-container > a:active:focus, .btn:active.focus, header .header-container .header-inner a:active.focus, #intro .section-container > a:active.focus, #competences .section-container > a:active.focus, #parcours .section-container > a:active.focus, .btn.active:focus, header .header-container .header-inner a.active:focus, #intro .section-container > a.active:focus, #competences .section-container > a.active:focus, #parcours .section-container > a.active:focus, .btn.active.focus, header .header-container .header-inner a.active.focus, #intro .section-container > a.active.focus, #competences .section-container > a.active.focus, #parcours .section-container > a.active.focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:hover, header .header-container .header-inner a:hover, #intro .section-container > a:hover, #competences .section-container > a:hover, .btn:focus, header .header-container .header-inner a:focus, #intro .section-container > a:focus, #competences .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #intro .section-container > a.focus, #competences .section-container > a.focus {
+  .btn:hover, header .header-container .header-inner a:hover, #intro .section-container > a:hover, #competences .section-container > a:hover, #parcours .section-container > a:hover, .btn:focus, header .header-container .header-inner a:focus, #intro .section-container > a:focus, #competences .section-container > a:focus, #parcours .section-container > a:focus, .btn.focus, header .header-container .header-inner a.focus, #intro .section-container > a.focus, #competences .section-container > a.focus, #parcours .section-container > a.focus {
     color: #333;
     text-decoration: none; }
-  .btn:active, header .header-container .header-inner a:active, #intro .section-container > a:active, #competences .section-container > a:active, .btn.active, header .header-container .header-inner a.active, #intro .section-container > a.active, #competences .section-container > a.active {
+  .btn:active, header .header-container .header-inner a:active, #intro .section-container > a:active, #competences .section-container > a:active, #parcours .section-container > a:active, .btn.active, header .header-container .header-inner a.active, #intro .section-container > a.active, #competences .section-container > a.active, #parcours .section-container > a.active {
     outline: 0;
     background-image: none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, header .header-container .header-inner a.disabled, #intro .section-container > a.disabled, #competences .section-container > a.disabled, .btn[disabled], header .header-container .header-inner a[disabled], #intro .section-container > a[disabled], #competences .section-container > a[disabled],
+  .btn.disabled, header .header-container .header-inner a.disabled, #intro .section-container > a.disabled, #competences .section-container > a.disabled, #parcours .section-container > a.disabled, .btn[disabled], header .header-container .header-inner a[disabled], #intro .section-container > a[disabled], #competences .section-container > a[disabled], #parcours .section-container > a[disabled],
   fieldset[disabled] .btn,
   fieldset[disabled] header .header-container .header-inner a, header .header-container .header-inner
   fieldset[disabled] a,
   fieldset[disabled] #intro .section-container > a, #intro
   fieldset[disabled] .section-container > a,
   fieldset[disabled] #competences .section-container > a, #competences
+  fieldset[disabled] .section-container > a,
+  fieldset[disabled] #parcours .section-container > a, #parcours
   fieldset[disabled] .section-container > a {
     cursor: not-allowed;
     opacity: 0.65;
@@ -4870,13 +4879,15 @@ select[multiple].input-lg,
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-a.btn.disabled, header .header-container .header-inner a.disabled, #intro .section-container > a.disabled, #competences .section-container > a.disabled,
+a.btn.disabled, header .header-container .header-inner a.disabled, #intro .section-container > a.disabled, #competences .section-container > a.disabled, #parcours .section-container > a.disabled,
 fieldset[disabled] a.btn,
 fieldset[disabled] header .header-container .header-inner a, header .header-container .header-inner
 fieldset[disabled] a,
 fieldset[disabled] #intro .section-container > a, #intro
 fieldset[disabled] .section-container > a,
 fieldset[disabled] #competences .section-container > a, #competences
+fieldset[disabled] .section-container > a,
+fieldset[disabled] #parcours .section-container > a, #parcours
 fieldset[disabled] .section-container > a {
   pointer-events: none; }
 
@@ -5123,19 +5134,19 @@ fieldset[disabled] .section-container > a {
     color: #777777;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, header .header-container .header-inner a, #intro .section-container > a, #competences .section-container > a {
+.btn-lg, .btn-group-lg > .btn, header .header-container .header-inner a, #intro .section-container > a, #competences .section-container > a, #parcours .section-container > a {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
   border-radius: 6px; }
 
-.btn-sm, .btn-group-sm > .btn, header .header-container .header-inner .btn-group-sm > a, #intro .section-container.btn-group-sm > a, #competences .section-container.btn-group-sm > a {
+.btn-sm, .btn-group-sm > .btn, header .header-container .header-inner .btn-group-sm > a, #intro .section-container.btn-group-sm > a, #competences .section-container.btn-group-sm > a, #parcours .section-container.btn-group-sm > a {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.btn-xs, .btn-group-xs > .btn, header .header-container .header-inner .btn-group-xs > a, #intro .section-container.btn-group-xs > a, #competences .section-container.btn-group-xs > a {
+.btn-xs, .btn-group-xs > .btn, header .header-container .header-inner .btn-group-xs > a, #intro .section-container.btn-group-xs > a, #competences .section-container.btn-group-xs > a, #parcours .section-container.btn-group-xs > a {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -5319,33 +5330,38 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, header .header-container .header-inner .btn-group > a, #intro .section-container.btn-group > a, #competences .section-container.btn-group > a,
+  .btn-group > .btn, header .header-container .header-inner .btn-group > a, #intro .section-container.btn-group > a, #competences .section-container.btn-group > a, #parcours .section-container.btn-group > a,
   .btn-group-vertical > .btn, header .header-container .header-inner
   .btn-group-vertical > a, #intro
   .section-container.btn-group-vertical > a, #competences
+  .section-container.btn-group-vertical > a, #parcours
   .section-container.btn-group-vertical > a {
     position: relative;
     float: left; }
-    .btn-group > .btn:hover, header .header-container .header-inner .btn-group > a:hover, #intro .section-container.btn-group > a:hover, #competences .section-container.btn-group > a:hover, .btn-group > .btn:focus, header .header-container .header-inner .btn-group > a:focus, #intro .section-container.btn-group > a:focus, #competences .section-container.btn-group > a:focus, .btn-group > .btn:active, header .header-container .header-inner .btn-group > a:active, #intro .section-container.btn-group > a:active, #competences .section-container.btn-group > a:active, .btn-group > .btn.active, header .header-container .header-inner .btn-group > a.active, #intro .section-container.btn-group > a.active, #competences .section-container.btn-group > a.active,
+    .btn-group > .btn:hover, header .header-container .header-inner .btn-group > a:hover, #intro .section-container.btn-group > a:hover, #competences .section-container.btn-group > a:hover, #parcours .section-container.btn-group > a:hover, .btn-group > .btn:focus, header .header-container .header-inner .btn-group > a:focus, #intro .section-container.btn-group > a:focus, #competences .section-container.btn-group > a:focus, #parcours .section-container.btn-group > a:focus, .btn-group > .btn:active, header .header-container .header-inner .btn-group > a:active, #intro .section-container.btn-group > a:active, #competences .section-container.btn-group > a:active, #parcours .section-container.btn-group > a:active, .btn-group > .btn.active, header .header-container .header-inner .btn-group > a.active, #intro .section-container.btn-group > a.active, #competences .section-container.btn-group > a.active, #parcours .section-container.btn-group > a.active,
     .btn-group-vertical > .btn:hover, header .header-container .header-inner
     .btn-group-vertical > a:hover, #intro
     .section-container.btn-group-vertical > a:hover, #competences
+    .section-container.btn-group-vertical > a:hover, #parcours
     .section-container.btn-group-vertical > a:hover,
     .btn-group-vertical > .btn:focus, header .header-container .header-inner
     .btn-group-vertical > a:focus, #intro
     .section-container.btn-group-vertical > a:focus, #competences
+    .section-container.btn-group-vertical > a:focus, #parcours
     .section-container.btn-group-vertical > a:focus,
     .btn-group-vertical > .btn:active, header .header-container .header-inner
     .btn-group-vertical > a:active, #intro
     .section-container.btn-group-vertical > a:active, #competences
+    .section-container.btn-group-vertical > a:active, #parcours
     .section-container.btn-group-vertical > a:active,
     .btn-group-vertical > .btn.active, header .header-container .header-inner
     .btn-group-vertical > a.active, #intro
     .section-container.btn-group-vertical > a.active, #competences
+    .section-container.btn-group-vertical > a.active, #parcours
     .section-container.btn-group-vertical > a.active {
       z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .btn-group a + .btn, .btn-group #intro .section-container > a + .btn, #intro .btn-group .section-container > a + .btn, .btn-group #competences .section-container > a + .btn, #competences .btn-group .section-container > a + .btn, .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .btn-group .btn + a, .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .btn-group a + a, .btn-group #intro header .header-container .header-inner .section-container > a + a, .btn-group #competences header .header-container .header-inner .section-container > a + a, .btn-group #intro .section-container > .btn + a, #intro .btn-group .section-container > .btn + a, #intro .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #intro .section-container > a + a, #intro .btn-group .section-container > a + a, .btn-group #competences .section-container > .btn + a, #competences .btn-group .section-container > .btn + a, #competences .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #competences .section-container > a + a, #competences .btn-group .section-container > a + a,
+.btn-group .btn + .btn, .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .btn-group a + .btn, .btn-group #intro .section-container > a + .btn, #intro .btn-group .section-container > a + .btn, .btn-group #competences .section-container > a + .btn, #competences .btn-group .section-container > a + .btn, .btn-group #parcours .section-container > a + .btn, #parcours .btn-group .section-container > a + .btn, .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .btn-group .btn + a, .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .btn-group a + a, .btn-group #intro header .header-container .header-inner .section-container > a + a, .btn-group #competences header .header-container .header-inner .section-container > a + a, .btn-group #parcours header .header-container .header-inner .section-container > a + a, .btn-group #intro .section-container > .btn + a, #intro .btn-group .section-container > .btn + a, #intro .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #intro .section-container > a + a, #intro .btn-group .section-container > a + a, .btn-group #competences .section-container > .btn + a, #competences .btn-group .section-container > .btn + a, #competences .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #competences .section-container > a + a, #competences .btn-group .section-container > a + a, .btn-group #parcours .section-container > .btn + a, #parcours .btn-group .section-container > .btn + a, #parcours .btn-group header .header-container .header-inner .section-container > a + a, .btn-group #parcours .section-container > a + a, #parcours .btn-group .section-container > a + a,
 .btn-group .btn + .btn-group,
 .btn-group header .header-container .header-inner a + .btn-group, header .header-container .header-inner
 .btn-group a + .btn-group,
@@ -5353,12 +5369,16 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
 .btn-group .section-container > a + .btn-group,
 .btn-group #competences .section-container > a + .btn-group, #competences
 .btn-group .section-container > a + .btn-group,
+.btn-group #parcours .section-container > a + .btn-group, #parcours
+.btn-group .section-container > a + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group header .header-container .header-inner .btn-group + a, header .header-container .header-inner
 .btn-group .btn-group + a,
 .btn-group #intro .section-container > .btn-group + a, #intro
 .btn-group .section-container > .btn-group + a,
 .btn-group #competences .section-container > .btn-group + a, #competences
+.btn-group .section-container > .btn-group + a,
+.btn-group #parcours .section-container > .btn-group + a, #parcours
 .btn-group .section-container > .btn-group + a,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
@@ -5370,25 +5390,25 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
     display: table; }
   .btn-toolbar:after {
     clear: both; }
-  .btn-toolbar .btn, .btn-toolbar header .header-container .header-inner a, header .header-container .header-inner .btn-toolbar a, .btn-toolbar #intro .section-container > a, #intro .btn-toolbar .section-container > a, .btn-toolbar #competences .section-container > a, #competences .btn-toolbar .section-container > a,
+  .btn-toolbar .btn, .btn-toolbar header .header-container .header-inner a, header .header-container .header-inner .btn-toolbar a, .btn-toolbar #intro .section-container > a, #intro .btn-toolbar .section-container > a, .btn-toolbar #competences .section-container > a, #competences .btn-toolbar .section-container > a, .btn-toolbar #parcours .section-container > a, #parcours .btn-toolbar .section-container > a,
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, header .header-container .header-inner .btn-toolbar > a, #intro .section-container.btn-toolbar > a, #competences .section-container.btn-toolbar > a,
+  .btn-toolbar > .btn, header .header-container .header-inner .btn-toolbar > a, #intro .section-container.btn-toolbar > a, #competences .section-container.btn-toolbar > a, #parcours .section-container.btn-toolbar > a,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #intro .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #intro .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), #parcours .section-container.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, header .header-container .header-inner .btn-group > a:first-child, #intro .section-container.btn-group > a:first-child, #competences .section-container.btn-group > a:first-child {
+.btn-group > .btn:first-child, header .header-container .header-inner .btn-group > a:first-child, #intro .section-container.btn-group > a:first-child, #competences .section-container.btn-group > a:first-child, #parcours .section-container.btn-group > a:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #intro .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), header .header-container .header-inner .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #intro .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #competences .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), #parcours .section-container.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group > a:last-child:not(:first-child), #intro .section-container.btn-group > a:last-child:not(:first-child), #competences .section-container.btn-group > a:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group > a:last-child:not(:first-child), #intro .section-container.btn-group > a:last-child:not(:first-child), #competences .section-container.btn-group > a:last-child:not(:first-child), #parcours .section-container.btn-group > a:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -5396,15 +5416,15 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group > .btn-group:not(:first-child):not(:last-child) > a, #intro .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group > .btn-group:not(:first-child):not(:last-child) > a, #intro .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a, #parcours .btn-group > .section-container.btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, #intro .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, #intro .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #parcours .btn-group > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, #intro .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, #intro .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #parcours .btn-group > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -5412,11 +5432,11 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #intro .section-container.btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #intro .section-container.btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle, #parcours .section-container.btn-group > a + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #intro .section-container.btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, header .header-container .header-inner .btn-group > a + .dropdown-toggle, #intro .section-container.btn-group > a + .dropdown-toggle, #competences .section-container.btn-group > a + .dropdown-toggle, #parcours .section-container.btn-group > a + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -5427,21 +5447,22 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.btn .caret, header .header-container .header-inner a .caret, #intro .section-container > a .caret, #competences .section-container > a .caret {
+.btn .caret, header .header-container .header-inner a .caret, #intro .section-container > a .caret, #competences .section-container > a .caret, #parcours .section-container > a .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, header .header-container .header-inner a .caret, #intro .section-container > a .caret, #competences .section-container > a .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, header .header-container .header-inner a .caret, #intro .section-container > a .caret, #competences .section-container > a .caret, #parcours .section-container > a .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup header .header-container .header-inner a .caret, header .header-container .header-inner .dropup a .caret, .dropup #intro .section-container > a .caret, #intro .dropup .section-container > a .caret, .dropup #competences .section-container > a .caret, #competences .dropup .section-container > a .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup header .header-container .header-inner a .caret, header .header-container .header-inner .dropup a .caret, .dropup #intro .section-container > a .caret, #intro .dropup .section-container > a .caret, .dropup #competences .section-container > a .caret, #competences .dropup .section-container > a .caret, .dropup #parcours .section-container > a .caret, #parcours .dropup .section-container > a .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, header .header-container .header-inner .btn-group-vertical > a, #intro .section-container.btn-group-vertical > a, #competences .section-container.btn-group-vertical > a,
+.btn-group-vertical > .btn, header .header-container .header-inner .btn-group-vertical > a, #intro .section-container.btn-group-vertical > a, #competences .section-container.btn-group-vertical > a, #parcours .section-container.btn-group-vertical > a,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn, header .header-container .header-inner
 .btn-group-vertical > .btn-group > a, #intro
 .btn-group-vertical > .section-container.btn-group > a, #competences
+.btn-group-vertical > .section-container.btn-group > a, #parcours
 .btn-group-vertical > .section-container.btn-group > a {
   display: block;
   float: none;
@@ -5455,46 +5476,48 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
 .btn-group-vertical > .btn-group:after {
   clear: both; }
 
-.btn-group-vertical > .btn-group > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group > a, #intro .btn-group-vertical > .section-container.btn-group > a, #competences .btn-group-vertical > .section-container.btn-group > a {
+.btn-group-vertical > .btn-group > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group > a, #intro .btn-group-vertical > .section-container.btn-group > a, #competences .btn-group-vertical > .section-container.btn-group > a, #parcours .btn-group-vertical > .section-container.btn-group > a {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, header .header-container .header-inner .btn-group-vertical > a + .btn, #intro .section-container.btn-group-vertical > a + .btn, #competences .section-container.btn-group-vertical > a + .btn, header .header-container .header-inner .btn-group-vertical > .btn + a, header .header-container .header-inner .btn-group-vertical > a + a, #intro .section-container.btn-group-vertical > .btn + a, #intro header .header-container .header-inner .section-container.btn-group-vertical > a + a, #intro .section-container.btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > .btn + a, #competences header .header-container .header-inner .section-container.btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > a + a,
+.btn-group-vertical > .btn + .btn, header .header-container .header-inner .btn-group-vertical > a + .btn, #intro .section-container.btn-group-vertical > a + .btn, #competences .section-container.btn-group-vertical > a + .btn, #parcours .section-container.btn-group-vertical > a + .btn, header .header-container .header-inner .btn-group-vertical > .btn + a, header .header-container .header-inner .btn-group-vertical > a + a, #intro .section-container.btn-group-vertical > .btn + a, #intro header .header-container .header-inner .section-container.btn-group-vertical > a + a, #intro .section-container.btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > .btn + a, #competences header .header-container .header-inner .section-container.btn-group-vertical > a + a, #competences .section-container.btn-group-vertical > a + a, #parcours .section-container.btn-group-vertical > .btn + a, #parcours header .header-container .header-inner .section-container.btn-group-vertical > a + a, #parcours .section-container.btn-group-vertical > a + a,
 .btn-group-vertical > .btn + .btn-group, header .header-container .header-inner
 .btn-group-vertical > a + .btn-group, #intro
 .section-container.btn-group-vertical > a + .btn-group, #competences
+.section-container.btn-group-vertical > a + .btn-group, #parcours
 .section-container.btn-group-vertical > a + .btn-group,
 .btn-group-vertical > .btn-group + .btn, header .header-container .header-inner
 .btn-group-vertical > .btn-group + a, #intro
 .section-container.btn-group-vertical > .btn-group + a, #competences
+.section-container.btn-group-vertical > .btn-group + a, #parcours
 .section-container.btn-group-vertical > .btn-group + a,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), header .header-container .header-inner .btn-group-vertical > a:not(:first-child):not(:last-child), #intro .section-container.btn-group-vertical > a:not(:first-child):not(:last-child), #competences .section-container.btn-group-vertical > a:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), header .header-container .header-inner .btn-group-vertical > a:not(:first-child):not(:last-child), #intro .section-container.btn-group-vertical > a:not(:first-child):not(:last-child), #competences .section-container.btn-group-vertical > a:not(:first-child):not(:last-child), #parcours .section-container.btn-group-vertical > a:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), header .header-container .header-inner .btn-group-vertical > a:first-child:not(:last-child), #intro .section-container.btn-group-vertical > a:first-child:not(:last-child), #competences .section-container.btn-group-vertical > a:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), header .header-container .header-inner .btn-group-vertical > a:first-child:not(:last-child), #intro .section-container.btn-group-vertical > a:first-child:not(:last-child), #competences .section-container.btn-group-vertical > a:first-child:not(:last-child), #parcours .section-container.btn-group-vertical > a:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group-vertical > a:last-child:not(:first-child), #intro .section-container.btn-group-vertical > a:last-child:not(:first-child), #competences .section-container.btn-group-vertical > a:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), header .header-container .header-inner .btn-group-vertical > a:last-child:not(:first-child), #intro .section-container.btn-group-vertical > a:last-child:not(:first-child), #competences .section-container.btn-group-vertical > a:last-child:not(:first-child), #parcours .section-container.btn-group-vertical > a:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, #intro .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, header .header-container .header-inner .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, #intro .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a, #competences .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a, #parcours .btn-group-vertical > .section-container.btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, #intro .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, header .header-container .header-inner .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, #intro .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #competences .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child, #parcours .btn-group-vertical > .section-container.btn-group:first-child:not(:last-child) > a:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, #intro .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, header .header-container .header-inner .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, #intro .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #competences .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child, #parcours .btn-group-vertical > .section-container.btn-group:last-child:not(:first-child) > a:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -5503,28 +5526,31 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate; }
-  .btn-group-justified > .btn, header .header-container .header-inner .btn-group-justified > a, #intro .section-container.btn-group-justified > a, #competences .section-container.btn-group-justified > a,
+  .btn-group-justified > .btn, header .header-container .header-inner .btn-group-justified > a, #intro .section-container.btn-group-justified > a, #competences .section-container.btn-group-justified > a, #parcours .section-container.btn-group-justified > a,
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
-  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group header .header-container .header-inner a, header .header-container .header-inner .btn-group-justified > .btn-group a, .btn-group-justified > .btn-group #intro .section-container > a, #intro .btn-group-justified > .btn-group .section-container > a, .btn-group-justified > .btn-group #competences .section-container > a, #competences .btn-group-justified > .btn-group .section-container > a {
+  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group header .header-container .header-inner a, header .header-container .header-inner .btn-group-justified > .btn-group a, .btn-group-justified > .btn-group #intro .section-container > a, #intro .btn-group-justified > .btn-group .section-container > a, .btn-group-justified > .btn-group #competences .section-container > a, #competences .btn-group-justified > .btn-group .section-container > a, .btn-group-justified > .btn-group #parcours .section-container > a, #parcours .btn-group-justified > .btn-group .section-container > a {
     width: 100%; }
   .btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], header .header-container .header-inner [data-toggle="buttons"] > a input[type="radio"], #intro .section-container[data-toggle="buttons"] > a input[type="radio"], #competences .section-container[data-toggle="buttons"] > a input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], header .header-container .header-inner [data-toggle="buttons"] > a input[type="radio"], #intro .section-container[data-toggle="buttons"] > a input[type="radio"], #competences .section-container[data-toggle="buttons"] > a input[type="radio"], #parcours .section-container[data-toggle="buttons"] > a input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], header .header-container .header-inner
 [data-toggle="buttons"] > a input[type="checkbox"], #intro
 .section-container[data-toggle="buttons"] > a input[type="checkbox"], #competences
+.section-container[data-toggle="buttons"] > a input[type="checkbox"], #parcours
 .section-container[data-toggle="buttons"] > a input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], header .header-container .header-inner
 [data-toggle="buttons"] > .btn-group > a input[type="radio"], #intro
 [data-toggle="buttons"] > .section-container.btn-group > a input[type="radio"], #competences
+[data-toggle="buttons"] > .section-container.btn-group > a input[type="radio"], #parcours
 [data-toggle="buttons"] > .section-container.btn-group > a input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], header .header-container .header-inner
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"], #intro
 [data-toggle="buttons"] > .section-container.btn-group > a input[type="checkbox"], #competences
+[data-toggle="buttons"] > .section-container.btn-group > a input[type="checkbox"], #parcours
 [data-toggle="buttons"] > .section-container.btn-group > a input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -5577,6 +5603,7 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
   .input-group-sm > .input-group-btn > .input-group-addon.btn, header .header-container .header-inner
   .input-group-sm > .input-group-btn > a.input-group-addon, #intro
   .input-group-sm > .section-container.input-group-btn > a.input-group-addon, #competences
+  .input-group-sm > .section-container.input-group-btn > a.input-group-addon, #parcours
   .input-group-sm > .section-container.input-group-btn > a.input-group-addon {
     padding: 5px 10px;
     font-size: 12px;
@@ -5586,6 +5613,7 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
   .input-group-lg > .input-group-btn > .input-group-addon.btn, header .header-container .header-inner
   .input-group-lg > .input-group-btn > a.input-group-addon, #intro
   .input-group-lg > .section-container.input-group-btn > a.input-group-addon, #competences
+  .input-group-lg > .section-container.input-group-btn > a.input-group-addon, #parcours
   .input-group-lg > .section-container.input-group-btn > a.input-group-addon {
     padding: 10px 16px;
     font-size: 18px;
@@ -5599,19 +5627,23 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
 .input-group-btn:first-child > .btn, header .header-container .header-inner
 .input-group-btn:first-child > a, #intro
 .section-container.input-group-btn:first-child > a, #competences
+.section-container.input-group-btn:first-child > a, #parcours
 .section-container.input-group-btn:first-child > a,
 .input-group-btn:first-child > .btn-group > .btn, header .header-container .header-inner
 .input-group-btn:first-child > .btn-group > a, #intro
 .input-group-btn:first-child > .section-container.btn-group > a, #competences
+.input-group-btn:first-child > .section-container.btn-group > a, #parcours
 .input-group-btn:first-child > .section-container.btn-group > a,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), header .header-container .header-inner
 .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #intro
 .section-container.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #competences
+.section-container.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #parcours
 .section-container.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, header .header-container .header-inner
 .input-group-btn:last-child > .btn-group:not(:last-child) > a, #intro
 .input-group-btn:last-child > .section-container.btn-group:not(:last-child) > a, #competences
+.input-group-btn:last-child > .section-container.btn-group:not(:last-child) > a, #parcours
 .input-group-btn:last-child > .section-container.btn-group:not(:last-child) > a {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
@@ -5624,19 +5656,23 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
 .input-group-btn:last-child > .btn, header .header-container .header-inner
 .input-group-btn:last-child > a, #intro
 .section-container.input-group-btn:last-child > a, #competences
+.section-container.input-group-btn:last-child > a, #parcours
 .section-container.input-group-btn:last-child > a,
 .input-group-btn:last-child > .btn-group > .btn, header .header-container .header-inner
 .input-group-btn:last-child > .btn-group > a, #intro
 .input-group-btn:last-child > .section-container.btn-group > a, #competences
+.input-group-btn:last-child > .section-container.btn-group > a, #parcours
 .input-group-btn:last-child > .section-container.btn-group > a,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child), header .header-container .header-inner
 .input-group-btn:first-child > a:not(:first-child), #intro
 .section-container.input-group-btn:first-child > a:not(:first-child), #competences
+.section-container.input-group-btn:first-child > a:not(:first-child), #parcours
 .section-container.input-group-btn:first-child > a:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, header .header-container .header-inner
 .input-group-btn:first-child > .btn-group:not(:first-child) > a, #intro
 .input-group-btn:first-child > .section-container.btn-group:not(:first-child) > a, #competences
+.input-group-btn:first-child > .section-container.btn-group:not(:first-child) > a, #parcours
 .input-group-btn:first-child > .section-container.btn-group:not(:first-child) > a {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -5648,16 +5684,16 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, header .header-container .header-inner .input-group-btn > a, #intro .section-container.input-group-btn > a, #competences .section-container.input-group-btn > a {
+  .input-group-btn > .btn, header .header-container .header-inner .input-group-btn > a, #intro .section-container.input-group-btn > a, #competences .section-container.input-group-btn > a, #parcours .section-container.input-group-btn > a {
     position: relative; }
-    .input-group-btn > .btn + .btn, header .header-container .header-inner .input-group-btn > a + .btn, #intro .section-container.input-group-btn > a + .btn, #competences .section-container.input-group-btn > a + .btn, header .header-container .header-inner .input-group-btn > .btn + a, header .header-container .header-inner .input-group-btn > a + a, #intro .section-container.input-group-btn > .btn + a, #intro header .header-container .header-inner .section-container.input-group-btn > a + a, #intro .section-container.input-group-btn > a + a, #competences .section-container.input-group-btn > .btn + a, #competences header .header-container .header-inner .section-container.input-group-btn > a + a, #competences .section-container.input-group-btn > a + a {
+    .input-group-btn > .btn + .btn, header .header-container .header-inner .input-group-btn > a + .btn, #intro .section-container.input-group-btn > a + .btn, #competences .section-container.input-group-btn > a + .btn, #parcours .section-container.input-group-btn > a + .btn, header .header-container .header-inner .input-group-btn > .btn + a, header .header-container .header-inner .input-group-btn > a + a, #intro .section-container.input-group-btn > .btn + a, #intro header .header-container .header-inner .section-container.input-group-btn > a + a, #intro .section-container.input-group-btn > a + a, #competences .section-container.input-group-btn > .btn + a, #competences header .header-container .header-inner .section-container.input-group-btn > a + a, #competences .section-container.input-group-btn > a + a, #parcours .section-container.input-group-btn > .btn + a, #parcours header .header-container .header-inner .section-container.input-group-btn > a + a, #parcours .section-container.input-group-btn > a + a {
       margin-left: -1px; }
-    .input-group-btn > .btn:hover, header .header-container .header-inner .input-group-btn > a:hover, #intro .section-container.input-group-btn > a:hover, #competences .section-container.input-group-btn > a:hover, .input-group-btn > .btn:focus, header .header-container .header-inner .input-group-btn > a:focus, #intro .section-container.input-group-btn > a:focus, #competences .section-container.input-group-btn > a:focus, .input-group-btn > .btn:active, header .header-container .header-inner .input-group-btn > a:active, #intro .section-container.input-group-btn > a:active, #competences .section-container.input-group-btn > a:active {
+    .input-group-btn > .btn:hover, header .header-container .header-inner .input-group-btn > a:hover, #intro .section-container.input-group-btn > a:hover, #competences .section-container.input-group-btn > a:hover, #parcours .section-container.input-group-btn > a:hover, .input-group-btn > .btn:focus, header .header-container .header-inner .input-group-btn > a:focus, #intro .section-container.input-group-btn > a:focus, #competences .section-container.input-group-btn > a:focus, #parcours .section-container.input-group-btn > a:focus, .input-group-btn > .btn:active, header .header-container .header-inner .input-group-btn > a:active, #intro .section-container.input-group-btn > a:active, #competences .section-container.input-group-btn > a:active, #parcours .section-container.input-group-btn > a:active {
       z-index: 2; }
-  .input-group-btn:first-child > .btn, header .header-container .header-inner .input-group-btn:first-child > a, #intro .section-container.input-group-btn:first-child > a, #competences .section-container.input-group-btn:first-child > a,
+  .input-group-btn:first-child > .btn, header .header-container .header-inner .input-group-btn:first-child > a, #intro .section-container.input-group-btn:first-child > a, #competences .section-container.input-group-btn:first-child > a, #parcours .section-container.input-group-btn:first-child > a,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:last-child > .btn, header .header-container .header-inner .input-group-btn:last-child > a, #intro .section-container.input-group-btn:last-child > a, #competences .section-container.input-group-btn:last-child > a,
+  .input-group-btn:last-child > .btn, header .header-container .header-inner .input-group-btn:last-child > a, #intro .section-container.input-group-btn:last-child > a, #competences .section-container.input-group-btn:last-child > a, #parcours .section-container.input-group-btn:last-child > a,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
@@ -6036,10 +6072,10 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
 .navbar-btn {
   margin-top: 7px;
   margin-bottom: 7px; }
-  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, header .header-container .header-inner .btn-group-sm > a.navbar-btn, #intro .section-container.btn-group-sm > a.navbar-btn, #competences .section-container.btn-group-sm > a.navbar-btn {
+  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, header .header-container .header-inner .btn-group-sm > a.navbar-btn, #intro .section-container.btn-group-sm > a.navbar-btn, #competences .section-container.btn-group-sm > a.navbar-btn, #parcours .section-container.btn-group-sm > a.navbar-btn {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, header .header-container .header-inner .btn-group-xs > a.navbar-btn, #intro .section-container.btn-group-xs > a.navbar-btn, #competences .section-container.btn-group-xs > a.navbar-btn {
+  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, header .header-container .header-inner .btn-group-xs > a.navbar-btn, #intro .section-container.btn-group-xs > a.navbar-btn, #competences .section-container.btn-group-xs > a.navbar-btn, #parcours .section-container.btn-group-xs > a.navbar-btn {
     margin-top: 14px;
     margin-bottom: 14px; }
 
@@ -6332,7 +6368,7 @@ tbody.collapse.in, #parcours .timeline li tbody.collapse.timeline-panel {
   border-radius: .25em; }
   .label:empty, #competences .section-container .competence .details li:empty {
     display: none; }
-  .btn .label, header .header-container .header-inner a .label, #intro .section-container > a .label, #competences .section-container > a .label, .btn #competences .section-container .competence .details li, #competences .section-container .competence .details .btn li, header .header-container .header-inner a #competences .section-container .competence .details li, #competences .section-container .competence .details header .header-container .header-inner a li, #competences #intro .section-container > a .competence .details li, #competences .section-container > a .competence .details li {
+  .btn .label, header .header-container .header-inner a .label, #intro .section-container > a .label, #competences .section-container > a .label, #parcours .section-container > a .label, .btn #competences .section-container .competence .details li, #competences .section-container .competence .details .btn li, header .header-container .header-inner a #competences .section-container .competence .details li, #competences .section-container .competence .details header .header-container .header-inner a li, #competences #intro .section-container > a .competence .details li, #competences .section-container > a .competence .details li, #competences #parcours .section-container > a .competence .details li {
     position: relative;
     top: -1px; }
 
@@ -6386,13 +6422,14 @@ a.label:hover, a.label:focus {
   border-radius: 10px; }
   .badge:empty, #parcours .timeline li .timeline-badge:empty {
     display: none; }
-  .btn .badge, header .header-container .header-inner a .badge, #intro .section-container > a .badge, #competences .section-container > a .badge, .btn #parcours .timeline li .timeline-badge, #parcours .timeline li .btn .timeline-badge, header .header-container .header-inner a #parcours .timeline li .timeline-badge, #parcours .timeline li header .header-container .header-inner a .timeline-badge, #intro .section-container > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro .section-container > a .timeline-badge, #competences .section-container > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences .section-container > a .timeline-badge {
+  .btn .badge, header .header-container .header-inner a .badge, #intro .section-container > a .badge, #competences .section-container > a .badge, #parcours .section-container > a .badge, .btn #parcours .timeline li .timeline-badge, #parcours .timeline li .btn .timeline-badge, header .header-container .header-inner a #parcours .timeline li .timeline-badge, #parcours .timeline li header .header-container .header-inner a .timeline-badge, #intro .section-container > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro .section-container > a .timeline-badge, #competences .section-container > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences .section-container > a .timeline-badge, #parcours .section-container > a .timeline li .timeline-badge, #parcours .timeline li .section-container > a .timeline-badge {
     position: relative;
     top: -1px; }
-  .btn-xs .badge, .btn-group-xs > .btn .badge, header .header-container .header-inner .btn-group-xs > a .badge, #intro .section-container.btn-group-xs > a .badge, #competences .section-container.btn-group-xs > a .badge, .btn-xs #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-xs .timeline-badge, .btn-group-xs > .btn #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-group-xs > .btn .timeline-badge, header .header-container .header-inner .btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li header .header-container .header-inner .btn-group-xs > a .timeline-badge, #intro .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro .section-container.btn-group-xs > a .timeline-badge, #competences .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences .section-container.btn-group-xs > a .timeline-badge,
+  .btn-xs .badge, .btn-group-xs > .btn .badge, header .header-container .header-inner .btn-group-xs > a .badge, #intro .section-container.btn-group-xs > a .badge, #competences .section-container.btn-group-xs > a .badge, #parcours .section-container.btn-group-xs > a .badge, .btn-xs #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-xs .timeline-badge, .btn-group-xs > .btn #parcours .timeline li .timeline-badge, #parcours .timeline li .btn-group-xs > .btn .timeline-badge, header .header-container .header-inner .btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li header .header-container .header-inner .btn-group-xs > a .timeline-badge, #intro .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro .section-container.btn-group-xs > a .timeline-badge, #competences .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences .section-container.btn-group-xs > a .timeline-badge, #parcours .section-container.btn-group-xs > a .timeline li .timeline-badge, #parcours .timeline li .section-container.btn-group-xs > a .timeline-badge,
   .btn-group-xs > .btn .badge, header .header-container .header-inner
   .btn-group-xs > a .badge, #intro
   .section-container.btn-group-xs > a .badge, #competences
+  .section-container.btn-group-xs > a .badge, #parcours
   .section-container.btn-group-xs > a .badge,
   .btn-group-xs > .btn #parcours .timeline li .timeline-badge, #parcours .timeline li
   .btn-group-xs > .btn .timeline-badge, header .header-container .header-inner
@@ -6401,6 +6438,8 @@ a.label:hover, a.label:focus {
   .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #intro
   .section-container.btn-group-xs > a .timeline-badge, #competences
   .section-container.btn-group-xs > a #parcours .timeline li .timeline-badge, #parcours .timeline li #competences
+  .section-container.btn-group-xs > a .timeline-badge, #parcours
+  .section-container.btn-group-xs > a .timeline li .timeline-badge, #parcours .timeline li
   .section-container.btn-group-xs > a .timeline-badge {
     top: 0;
     padding: 1px 5px; }
@@ -7294,10 +7333,10 @@ button.close {
     display: table; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer a + .btn, .modal-footer #intro .section-container > a + .btn, #intro .modal-footer .section-container > a + .btn, .modal-footer #competences .section-container > a + .btn, #competences .modal-footer .section-container > a + .btn, .modal-footer header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn + a, .modal-footer header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer a + a, .modal-footer #intro header .header-container .header-inner .section-container > a + a, .modal-footer #competences header .header-container .header-inner .section-container > a + a, .modal-footer #intro .section-container > .btn + a, #intro .modal-footer .section-container > .btn + a, #intro .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #intro .section-container > a + a, #intro .modal-footer .section-container > a + a, .modal-footer #competences .section-container > .btn + a, #competences .modal-footer .section-container > .btn + a, #competences .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #competences .section-container > a + a, #competences .modal-footer .section-container > a + a {
+  .modal-footer .btn + .btn, .modal-footer header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer a + .btn, .modal-footer #intro .section-container > a + .btn, #intro .modal-footer .section-container > a + .btn, .modal-footer #competences .section-container > a + .btn, #competences .modal-footer .section-container > a + .btn, .modal-footer #parcours .section-container > a + .btn, #parcours .modal-footer .section-container > a + .btn, .modal-footer header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn + a, .modal-footer header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer a + a, .modal-footer #intro header .header-container .header-inner .section-container > a + a, .modal-footer #competences header .header-container .header-inner .section-container > a + a, .modal-footer #parcours header .header-container .header-inner .section-container > a + a, .modal-footer #intro .section-container > .btn + a, #intro .modal-footer .section-container > .btn + a, #intro .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #intro .section-container > a + a, #intro .modal-footer .section-container > a + a, .modal-footer #competences .section-container > .btn + a, #competences .modal-footer .section-container > .btn + a, #competences .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #competences .section-container > a + a, #competences .modal-footer .section-container > a + a, .modal-footer #parcours .section-container > .btn + a, #parcours .modal-footer .section-container > .btn + a, #parcours .modal-footer header .header-container .header-inner .section-container > a + a, .modal-footer #parcours .section-container > a + a, #parcours .modal-footer .section-container > a + a {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer .btn-group a + .btn, .modal-footer .btn-group #intro .section-container > a + .btn, #intro .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group #competences .section-container > a + .btn, #competences .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn-group .btn + a, .modal-footer .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer .btn-group a + a, .modal-footer .btn-group #intro header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #intro .section-container > .btn + a, #intro .modal-footer .btn-group .section-container > .btn + a, #intro .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #intro .section-container > a + a, #intro .modal-footer .btn-group .section-container > a + a, .modal-footer .btn-group #competences .section-container > .btn + a, #competences .modal-footer .btn-group .section-container > .btn + a, #competences .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences .section-container > a + a, #competences .modal-footer .btn-group .section-container > a + a {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group header .header-container .header-inner a + .btn, header .header-container .header-inner .modal-footer .btn-group a + .btn, .modal-footer .btn-group #intro .section-container > a + .btn, #intro .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group #competences .section-container > a + .btn, #competences .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group #parcours .section-container > a + .btn, #parcours .modal-footer .btn-group .section-container > a + .btn, .modal-footer .btn-group header .header-container .header-inner .btn + a, header .header-container .header-inner .modal-footer .btn-group .btn + a, .modal-footer .btn-group header .header-container .header-inner a + a, header .header-container .header-inner .modal-footer .btn-group a + a, .modal-footer .btn-group #intro header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #parcours header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #intro .section-container > .btn + a, #intro .modal-footer .btn-group .section-container > .btn + a, #intro .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #intro .section-container > a + a, #intro .modal-footer .btn-group .section-container > a + a, .modal-footer .btn-group #competences .section-container > .btn + a, #competences .modal-footer .btn-group .section-container > .btn + a, #competences .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #competences .section-container > a + a, #competences .modal-footer .btn-group .section-container > a + a, .modal-footer .btn-group #parcours .section-container > .btn + a, #parcours .modal-footer .btn-group .section-container > .btn + a, #parcours .modal-footer .btn-group header .header-container .header-inner .section-container > a + a, .modal-footer .btn-group #parcours .section-container > a + a, #parcours .modal-footer .btn-group .section-container > a + a {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -7720,7 +7759,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption header .header-container .header-inner a, header .header-container .header-inner .carousel-caption a, .carousel-caption #intro .section-container > a, #intro .carousel-caption .section-container > a, .carousel-caption #competences .section-container > a, #competences .carousel-caption .section-container > a {
+  .carousel-caption .btn, .carousel-caption header .header-container .header-inner a, header .header-container .header-inner .carousel-caption a, .carousel-caption #intro .section-container > a, #intro .carousel-caption .section-container > a, .carousel-caption #competences .section-container > a, #competences .carousel-caption .section-container > a, .carousel-caption #parcours .section-container > a, #parcours .carousel-caption .section-container > a {
     text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -7958,12 +7997,17 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+a > span.down {
+  margin-left: 5px;
+  font-size: 10px;
+  bottom: 4px; }
+
 html, body {
   height: 100%;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
 
 .me {
-  font-family: "Shadows Into Light", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Indie Flower", "Helvetica Neue", Arial, sans-serif;
   font-size: larger;
   font-weight: 700; }
 
@@ -7973,7 +8017,7 @@ header {
   background-image: url("https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1550");
   background-size: cover;
   position: relative;
-  color: white; }
+  color: #ffffff; }
   header .header-container {
     position: absolute;
     top: 30%;
@@ -7991,55 +8035,55 @@ header {
         margin: 0; }
       header .header-container .header-inner a {
         margin-top: 80px;
-        background-color: #2a9643;
-        color: #fff; }
+        background-color: #446D73;
+        color: #ffffff; }
 
 section {
   padding: 40px 0;
   background-size: cover; }
   section h1 {
     margin: 11px 0 22px; }
-  section .section-container {
-    color: white; }
-    section .section-container p a {
-      color: white;
-      text-decoration: underline; }
+  section .section-container p a {
+    color: #ffffff;
+    text-decoration: underline; }
 
 #intro {
-  background-color: #2a9643; }
+  background-color: #446D73;
+  color: #ffffff; }
   #intro .section-container > a {
-    background-color: #222222;
-    color: #fff; }
+    background-color: #ffffff;
+    color: #446D73; }
 
 #competences {
-  background-color: #222222;
-  background-image: url("http://lorempixel.com/g/800/800/abstract/2"); }
-  #competences .section-container h1 {
-    color: #fff; }
-  #competences .section-container .competence {
-    background-color: rgba(34, 34, 34, 0.8);
-    margin: 20px 0;
-    padding: 10px; }
+  background-color: #222D2F;
+  background-image: url("https://images.unsplash.com/photo-1443890923422-7819ed4101c0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=d08144fcf8610012628be9e43708f226"); }
+  #competences .section-container {
+    color: #ffffff; }
+    #competences .section-container h1 {
+      color: #ffffff; }
+    #competences .section-container .competence .inner {
+      background-color: rgba(34, 45, 47, 0.8);
+      padding-bottom: 20px; }
     #competences .section-container .competence h2 {
       clear: both; }
-    #competences .section-container .competence.php > .level > .outer > .inner {
+    #competences .section-container .competence.php > .inner > .level > .outer > .inner {
       width: 80%; }
-    #competences .section-container .competence.htmlcssjs > .level > .outer > .inner {
+    #competences .section-container .competence.htmlcssjs > .inner > .level > .outer > .inner {
       width: 90%; }
     #competences .section-container .competence .details li a {
       color: white; }
     #competences .section-container .competence .description {
       clear: both; }
-  #competences .section-container > a {
-    background-color: #ffffff;
-    color: #333333; }
+    #competences .section-container > a {
+      background-color: #ffffff;
+      color: #222D2F; }
 
 #parcours {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #821F31;
+  color: #ffffff;
   position: relative; }
   #parcours h1 {
-    color: #333333; }
+    color: #ffffff; }
   #parcours .timeline {
     color: #000000; }
     #parcours .timeline:before {
@@ -8070,7 +8114,7 @@ section {
         top: 50%;
         margin-top: -20px;
         border: solid 1px #cccccc; }
-        #parcours .timeline li .timeline-badge .glyphicon {
+        #parcours .timeline li .timeline-badge .icon {
           width: 20px;
           height: 20px; }
       #parcours .timeline li .timeline-panel {
@@ -8081,3 +8125,6 @@ section {
         #parcours .timeline li .timeline-panel .timeline-heading .time {
           color: #999999;
           float: right; }
+  #parcours .section-container > a {
+    background-color: #ffffff;
+    color: #222D2F; }

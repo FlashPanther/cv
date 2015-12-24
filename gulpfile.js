@@ -40,7 +40,14 @@ gulp.task('print', function(){
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['screen', 'print', 'js']);
+gulp.task('fonts', function(){
+    return gulp.src([
+        'bower_components/bootstrap-sass/assets/fonts/bootstrap/*'
+    ])
+        .pipe(gulp.dest('./fonts/'));
+});
+
+gulp.task('default', ['screen', 'print', 'js', 'fonts']);
 
 gulp.task('watch', function() {
     gulp.start(['default']);

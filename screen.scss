@@ -1,22 +1,26 @@
 // Core variables and mixins
 
-$introBgColor: #2a9643;
-$introColor: #fff;
+$headerColor: #ffffff;
 
-$competencesBgColor: #222222;
-$competencesColor: #fff;
+$introBgColor: #446D73;
+$introColor: #ffffff;
 
-$parcoursBgColor: #ffffff;
-$parcoursColor: #333333;
+$competencesBgColor: #222D2F;
+$competencesColor: #ffffff;
+
+$parcoursBgColor: #821F31;
+$parcoursColor: #ffffff;
 
 //$border-radius-large:   40px !default;
 $line-height-base:        22/14 !default;
 
+$icon-font-path: "fonts/" !default;
+
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 $seriousFont: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-$funnyFont: 'Shadows Into Light', 'Helvetica Neue', Arial, sans-serif;
-
+$funnyFont: 'Indie Flower', 'Helvetica Neue', Arial, sans-serif;
+a>span.down{@extend .glyphicon; @extend .glyphicon-chevron-down;margin-left: 5px;font-size: 10px;bottom: 4px;}
 html, body{
   height: 100%;
   font-family: $seriousFont;
@@ -28,7 +32,7 @@ header{
   background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1550');
   background-size: cover;
   position: relative;
-  color: white;
+  color: $headerColor;
   .header-container{
     position: absolute;
     top:30%;
@@ -69,37 +73,42 @@ section{
   }
   .section-container{
     @extend .container;
-    color: white;
-    p a {color: white; text-decoration: underline}
+    p a {color: $introColor; text-decoration: underline}
   }
 }
 #intro{
   background-color: $introBgColor;
+  color: $introColor;
   .section-container>a{
     @extend .btn;
     @extend .btn-lg;
-    background-color: $competencesBgColor;
-    color: $competencesColor;
+    background-color: $introColor;
+    color: $introBgColor;
   }
 }
 #competences{
   background-color: $competencesBgColor;
-  background-image: url('http://lorempixel.com/g/800/800/abstract/2');
+  background-image: url('https://images.unsplash.com/photo-1443890923422-7819ed4101c0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=d08144fcf8610012628be9e43708f226');
   .section-container{
+    color: $competencesColor;
     h1{
       color: $competencesColor;
     }
     .competence{
-      background-color: transparentize($competencesBgColor, 0.2);
-      margin: 20px 0;
-      padding: 10px;
-      @extend .row;
+      @extend .col-md-6;
+      .inner{
+        @extend .row;
+        @extend .col-xs-12;
+        background-color: transparentize($competencesBgColor, 0.2);
+        padding-bottom: 20px;
+      }
+      //margin: 20px 0;
       h2{
         clear: both;
         @extend .col-xs-12;
       }
       .level{
-        @extend .col-md-6;
+        @extend .col-xs-12;
         .outer{
           @extend .progress;
           .inner{
@@ -109,10 +118,10 @@ section{
           }
         }
       }
-      &.php>.level>.outer>.inner{width: 80%}
-      &.htmlcssjs>.level>.outer>.inner{width: 90%;}
+      &.php>.inner>.level>.outer>.inner{width: 80%}
+      &.htmlcssjs>.inner>.level>.outer>.inner{width: 90%;}
       .details{
-        @extend .col-md-6;
+        @extend .col-xs-12;
         @extend .list-unstyled;
         li{
           @extend .label;
@@ -128,8 +137,8 @@ section{
     >a{
       @extend .btn;
       @extend .btn-lg;
-      background-color: $parcoursBgColor;
-      color: $parcoursColor;
+      background-color: $competencesColor;
+      color: $competencesBgColor;
     }
   }
 }
@@ -184,7 +193,9 @@ section{
         top: 50%;
         margin-top: -20px;
         border: solid 1px lighten(#000000, 80);
-        .glyphicon{
+        .icon{
+          @extend .glyphicon;
+          @extend .glyphicon-ok;
           width: 20px;
           height: 20px;
         }
@@ -210,5 +221,11 @@ section{
         }
       }
     }
+  }
+  .section-container>a{
+    @extend .btn;
+    @extend .btn-lg;
+    background-color: $competencesColor;
+    color: $competencesBgColor;
   }
 }
