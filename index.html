@@ -7,21 +7,35 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="screen.css" class="css" media="screen">
     <link rel="stylesheet" href="print.css" class="css" media="print">
+    <!--<link rel="stylesheet" href="print.css" class="css" media="screen">-->
     <script src="app.js"></script>
 </head>
 <body>
 <header>
     <div class="header-container">
         <div class="header-inner">
-            <img src="http://www.gravatar.com/avatar/3fa5c89e3d10257a21ce355dc988e32c?s=200" alt="">
-            <h1><span class="me">Thomas Devos</span>, développeur PHP</h1>
-            <h2>Developpeur Symfony (HR-Rail)</h2>
+            <div class="title">
+                <h1><span class="me">Thomas Devos</span><span class="fonction">Développeur PHP</span></h1>
+                <h2>Developpeur Symfony (HR-Rail)</h2>
+            </div>
+            <div class="image">
+                <img src="http://www.gravatar.com/avatar/3fa5c89e3d10257a21ce355dc988e32c?s=200" alt="">
+            </div>
+            <div class="infos">
+                <div class="address-contact">
+                    6, rue du pont de Lesssines <br/>
+                    7911 Frasnes-lez-Buissenal (Belgique)<br/>
+                    0479/45.98.26 <br/>
+                    devos.thom@gmail.com <br/>
+                    http://tdevos.be
+                </div>
+            </div>
             <a href="#intro" class="wow bounce" data-wow-delay="3s">Continue<span class="down"></span></a>
         </div>
     </div>
 </header>
 <section id="intro">
-    <div class="section-container">
+    <div class="section-container wow fadeIn">
         <h1>Un CV/portfolio en ligne</h1>
         <p>
             Quoi de plus parlant que de décrire ses compétences de développement <span class="me">en développant</span>.
@@ -37,14 +51,14 @@
         <p>
             <span class="me">Bonne visite !</span>
         </p>
-        <a href="#competences">Mes compétences<span class="down"></span></a>
+        <a href="#competences">Compétences<span class="down"></span></a>
     </div>
 </section>
 <section id="competences">
     <div class="section-container">
-        <h1>Mes compétences</h1>
+        <h1>Compétences</h1>
 
-        <div class="competence php">
+        <div class="competence php wow slideInLeft">
             <div class="inner">
                 <h2>PHP</h2>
                 <div class="level">
@@ -72,7 +86,7 @@
             </div>
         </div>
 
-        <div class="competence htmlcssjs">
+        <div class="competence htmlcssjs wow slideInRight">
             <div class="inner">
                 <h2>HTML / CSS / JS</h2>
                 <div class="level">
@@ -83,6 +97,8 @@
                 <ul class="details">
                     <li><a href="http://www.w3.org/TR/html5/" target="_blank">HTML 5</a></li>
                     <li><a href="http://www.w3schools.com/cssref/default.asp" target="_blank">CSS 3</a></li>
+                    <li><a href="http://www.w3schools.com/cssref/default.asp" target="_blank">LESS</a></li>
+                    <li><a href="http://www.w3schools.com/cssref/default.asp" target="_blank">SASS</a></li>
                     <li><a href="" target="_blank">SEO</a></li>
                     <li><a href="https://www.datatables.net" target="_blank">Responsive</a></li>
                     <li><a href="https://www.javascript.com/" target="_blank">Javascript</a></li>
@@ -91,12 +107,13 @@
                     <li><a href="https://www.datatables.net" target="_blank">NodeJs</a></li>
                 </ul>
                 <div class="description">
-                    Intégration, SEO
+                    Intégration de designs (standards W3C). <br/>
+                    Interface utilisateur et expérience utilisateur.
                 </div>
             </div>
         </div>
 
-        <div class="competence other">
+        <div class="competence other wow slideInRight">
             <div class="inner">
                 <h2>Autre</h2>
                 <div class="level">
@@ -109,12 +126,13 @@
                     <li><a href="" target="_blank">Scrum</a></li>
                     <li><a href="" target="_blank">PhpStorm</a></li>
                     <li><a href="" target="_blank">Eclipse</a></li>
+                    <li><a href="" target="_blank">Ubuntu</a></li>
                     <li><a href="" target="_blank">Gestion de serveur</a></li>
                     <li><a href="" target="_blank">Gestion de projet</a></li>
                     <li><a href="" target="_blank">Gestion d'équipe</a></li>
                 </ul>
                 <div class="description">
-                    Connaissances desbonne pratiques JS.
+                    Utilisation de Linux
                 </div>
             </div>
         </div>
@@ -131,10 +149,10 @@
                     <div class="timeline-badge">
                         <div class="icon"></div>
                     </div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel wow fadeIn">
                         <div class="arrow"></div>
                         <div class="timeline-heading">
-                            Freelance (indépendant complémentaire) <span class="time">Mars 2015 - <strong>Maintenant</strong></span>
+                            <a href="">Freelance (indép. complémentaire)</a> <span class="time">Mars 2015 - <strong>Maintenant</strong></span>
                         </div>
                         <div class="timeline-body">
                         </div>
@@ -145,7 +163,7 @@
                     <div class="timeline-badge">
                         <div class="icon"></div>
                     </div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel wow fadeIn">
                         <div class="arrow"></div>
                         <div class="timeline-heading">
                             <a target="_blank" href="http://www.hr-rail.be/">HR-rail</a>
@@ -163,7 +181,7 @@
                     <div class="timeline-badge">
                         <div class="icon"></div>
                     </div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel wow fadeIn">
                         <div class="arrow"></div>
                         <div class="timeline-heading">
                             <a target="_blank" href="http://www.bewan.be/">Bewan</a>
@@ -184,7 +202,7 @@
                     <div class="timeline-badge">
                         <div class="icon"></div>
                     </div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel wow fadeIn">
                         <div class="arrow"></div>
                         <div class="timeline-heading">
                             <a target="_blank" href="http://patro.be/">Fédération nationale des patros</a>
@@ -203,7 +221,7 @@
                     <div class="timeline-badge">
                         <div class="icon"></div>
                     </div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel wow fadeIn">
                         <div class="arrow"></div>
                         <div class="timeline-heading">
                             <a href="http://www.zenith-auto.com/en/" target="_blank">Zenith Automotive</a>
@@ -223,6 +241,37 @@
     <div class="inner">
         <div class="section-container">
             <h1>Projets</h1>
+            <div class="row">
+                <div class="project">
+                    <div class="inner">
+                        <h2>Native-auctions.com</h2>
+                        <img src="native.png" alt=""/>
+                        <div class="description">
+                            Intégration, développement du système de gestion de contenu, du système d'enchère, ...
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="inner">
+                        <h2>Monactivite.be</h2>
+                        <img src="monactivite.png" alt=""/>
+                        <div class="description">
+                            Création du concept, gestion du projet, design, intégration et système de gestion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="inner">
+                        <h2>Voeuxpatro.be</h2>
+                        <img src="voeuxpatro.png" alt=""/>
+                        <div class="description">
+                            Intégration, développement du système
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -3561,13 +3561,13 @@ pre {
   .row:after, #competences .section-container .competence .inner:after, #parcours .timeline li:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #competences .section-container .competence, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #competences .section-container .competence .inner, #competences .section-container .competence h2, #competences .section-container .competence .level, #competences .section-container .competence .details, .col-sm-12, .col-md-12, #competences .section-container .competence .description, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, #projets .inner .section-container .project, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #competences .section-container .competence, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #competences .section-container .competence .inner, #competences .section-container .competence h2, #competences .section-container .competence .level, #competences .section-container .competence .details, .col-sm-12, .col-md-12, #competences .section-container .competence .description, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #competences .section-container .competence .inner, #competences .section-container .competence h2, #competences .section-container .competence .level, #competences .section-container .competence .details {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, #projets .inner .section-container .project, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #competences .section-container .competence .inner, #competences .section-container .competence h2, #competences .section-container .competence .level, #competences .section-container .competence .details {
   float: left; }
 
 .col-xs-1 {
@@ -3579,7 +3579,7 @@ pre {
 .col-xs-3 {
   width: 25%; }
 
-.col-xs-4 {
+.col-xs-4, #projets .inner .section-container .project {
   width: 33.33333%; }
 
 .col-xs-5 {
@@ -6869,7 +6869,7 @@ button.list-group-item-danger {
   margin-bottom: 0;
   line-height: 1.3; }
 
-.panel {
+.panel, #projets .inner .section-container .project .inner {
   margin-bottom: 22px;
   background-color: #fff;
   border: 1px solid transparent;
@@ -6877,20 +6877,20 @@ button.list-group-item-danger {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
 
-.panel-body {
+.panel-body, #projets .inner .section-container .project .inner .description {
   padding: 15px; }
-  .panel-body:before, .panel-body:after {
+  .panel-body:before, #projets .inner .section-container .project .inner .description:before, .panel-body:after, #projets .inner .section-container .project .inner .description:after {
     content: " ";
     display: table; }
-  .panel-body:after {
+  .panel-body:after, #projets .inner .section-container .project .inner .description:after {
     clear: both; }
 
-.panel-heading {
+.panel-heading, #projets .inner .section-container .project .inner h2 {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px; }
-  .panel-heading > .dropdown .dropdown-toggle {
+  .panel-heading > .dropdown .dropdown-toggle, #projets .inner .section-container .project .inner h2 > .dropdown .dropdown-toggle {
     color: inherit; }
 
 .panel-title {
@@ -6912,263 +6912,268 @@ button.list-group-item-danger {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px; }
 
-.panel > .list-group,
-.panel > .panel-collapse > .list-group {
+.panel > .list-group, #projets .inner .section-container .project .inner > .list-group,
+.panel > .panel-collapse > .list-group, #projets .inner .section-container .project .inner > .panel-collapse > .list-group {
   margin-bottom: 0; }
-  .panel > .list-group .list-group-item,
-  .panel > .panel-collapse > .list-group .list-group-item {
+  .panel > .list-group .list-group-item, #projets .inner .section-container .project .inner > .list-group .list-group-item,
+  .panel > .panel-collapse > .list-group .list-group-item, #projets .inner .section-container .project .inner > .panel-collapse > .list-group .list-group-item {
     border-width: 1px 0;
     border-radius: 0; }
-  .panel > .list-group:first-child .list-group-item:first-child,
-  .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
+  .panel > .list-group:first-child .list-group-item:first-child, #projets .inner .section-container .project .inner > .list-group:first-child .list-group-item:first-child,
+  .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child, #projets .inner .section-container .project .inner > .panel-collapse > .list-group:first-child .list-group-item:first-child {
     border-top: 0;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px; }
-  .panel > .list-group:last-child .list-group-item:last-child,
-  .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
+  .panel > .list-group:last-child .list-group-item:last-child, #projets .inner .section-container .project .inner > .list-group:last-child .list-group-item:last-child,
+  .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child, #projets .inner .section-container .project .inner > .panel-collapse > .list-group:last-child .list-group-item:last-child {
     border-bottom: 0;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px; }
 
-.panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {
+.panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child, #projets .inner .section-container .project .inner > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child, #projets .inner .section-container .project .inner .panel > h2 + .panel-collapse > .list-group .list-group-item:first-child, #projets .inner .section-container .project .inner > h2 + .panel-collapse > .list-group .list-group-item:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.panel-heading + .list-group .list-group-item:first-child {
+.panel-heading + .list-group .list-group-item:first-child, #projets .inner .section-container .project .inner h2 + .list-group .list-group-item:first-child {
   border-top-width: 0; }
 
 .list-group + .panel-footer {
   border-top-width: 0; }
 
-.panel > .table,
-.panel > .table-responsive > .table,
-.panel > .panel-collapse > .table {
+.panel > .table, #projets .inner .section-container .project .inner > .table,
+.panel > .table-responsive > .table, #projets .inner .section-container .project .inner > .table-responsive > .table,
+.panel > .panel-collapse > .table, #projets .inner .section-container .project .inner > .panel-collapse > .table {
   margin-bottom: 0; }
-  .panel > .table caption,
-  .panel > .table-responsive > .table caption,
-  .panel > .panel-collapse > .table caption {
+  .panel > .table caption, #projets .inner .section-container .project .inner > .table caption,
+  .panel > .table-responsive > .table caption, #projets .inner .section-container .project .inner > .table-responsive > .table caption,
+  .panel > .panel-collapse > .table caption, #projets .inner .section-container .project .inner > .panel-collapse > .table caption {
     padding-left: 15px;
     padding-right: 15px; }
 
-.panel > .table:first-child,
-.panel > .table-responsive:first-child > .table:first-child {
+.panel > .table:first-child, #projets .inner .section-container .project .inner > .table:first-child,
+.panel > .table-responsive:first-child > .table:first-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px; }
-  .panel > .table:first-child > thead:first-child > tr:first-child,
-  .panel > .table:first-child > tbody:first-child > tr:first-child,
-  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
-  .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
+  .panel > .table:first-child > thead:first-child > tr:first-child, #projets .inner .section-container .project .inner > .table:first-child > thead:first-child > tr:first-child,
+  .panel > .table:first-child > tbody:first-child > tr:first-child, #projets .inner .section-container .project .inner > .table:first-child > tbody:first-child > tr:first-child,
+  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
+  .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
-    .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
-    .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
-    .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
-    .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
-    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
-    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
-    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
-    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+    .panel > .table:first-child > thead:first-child > tr:first-child td:first-child, #projets .inner .section-container .project .inner > .table:first-child > thead:first-child > tr:first-child td:first-child,
+    .panel > .table:first-child > thead:first-child > tr:first-child th:first-child, #projets .inner .section-container .project .inner > .table:first-child > thead:first-child > tr:first-child th:first-child,
+    .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child, #projets .inner .section-container .project .inner > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+    .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child, #projets .inner .section-container .project .inner > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
       border-top-left-radius: 3px; }
-    .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
-    .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
-    .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
-    .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
-    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
-    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
-    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
-    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+    .panel > .table:first-child > thead:first-child > tr:first-child td:last-child, #projets .inner .section-container .project .inner > .table:first-child > thead:first-child > tr:first-child td:last-child,
+    .panel > .table:first-child > thead:first-child > tr:first-child th:last-child, #projets .inner .section-container .project .inner > .table:first-child > thead:first-child > tr:first-child th:last-child,
+    .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child, #projets .inner .section-container .project .inner > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+    .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child, #projets .inner .section-container .project .inner > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+    .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+    .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child, #projets .inner .section-container .project .inner > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
       border-top-right-radius: 3px; }
 
-.panel > .table:last-child,
-.panel > .table-responsive:last-child > .table:last-child {
+.panel > .table:last-child, #projets .inner .section-container .project .inner > .table:last-child,
+.panel > .table-responsive:last-child > .table:last-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px; }
-  .panel > .table:last-child > tbody:last-child > tr:last-child,
-  .panel > .table:last-child > tfoot:last-child > tr:last-child,
-  .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
-  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
+  .panel > .table:last-child > tbody:last-child > tr:last-child, #projets .inner .section-container .project .inner > .table:last-child > tbody:last-child > tr:last-child,
+  .panel > .table:last-child > tfoot:last-child > tr:last-child, #projets .inner .section-container .project .inner > .table:last-child > tfoot:last-child > tr:last-child,
+  .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
+  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px; }
-    .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
-    .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
-    .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
-    .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
-    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
-    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
-    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
-    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+    .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child, #projets .inner .section-container .project .inner > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+    .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child, #projets .inner .section-container .project .inner > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+    .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child, #projets .inner .section-container .project .inner > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+    .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child, #projets .inner .section-container .project .inner > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
       border-bottom-left-radius: 3px; }
-    .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
-    .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
-    .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
-    .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
-    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
-    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
-    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
-    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+    .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child, #projets .inner .section-container .project .inner > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+    .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child, #projets .inner .section-container .project .inner > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+    .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child, #projets .inner .section-container .project .inner > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+    .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child, #projets .inner .section-container .project .inner > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+    .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+    .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child, #projets .inner .section-container .project .inner > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
       border-bottom-right-radius: 3px; }
 
-.panel > .panel-body + .table,
-.panel > .panel-body + .table-responsive,
-.panel > .table + .panel-body,
-.panel > .table-responsive + .panel-body {
+.panel > .panel-body + .table, #projets .inner .section-container .project .inner > .panel-body + .table, #projets .inner .section-container .project .inner .panel > .description + .table, #projets .inner .section-container .project .inner > .description + .table,
+.panel > .panel-body + .table-responsive, #projets .inner .section-container .project .inner > .panel-body + .table-responsive, #projets .inner .section-container .project .inner
+.panel > .description + .table-responsive, #projets .inner .section-container .project .inner > .description + .table-responsive,
+.panel > .table + .panel-body, #projets .inner .section-container .project .inner > .table + .panel-body, #projets .inner .section-container .project .inner
+.panel > .table + .description, #projets .inner .section-container .project .inner > .table + .description,
+.panel > .table-responsive + .panel-body, #projets .inner .section-container .project .inner > .table-responsive + .panel-body, #projets .inner .section-container .project .inner
+.panel > .table-responsive + .description, #projets .inner .section-container .project .inner > .table-responsive + .description {
   border-top: 1px solid #ddd; }
 
-.panel > .table > tbody:first-child > tr:first-child th,
-.panel > .table > tbody:first-child > tr:first-child td {
+.panel > .table > tbody:first-child > tr:first-child th, #projets .inner .section-container .project .inner > .table > tbody:first-child > tr:first-child th,
+.panel > .table > tbody:first-child > tr:first-child td, #projets .inner .section-container .project .inner > .table > tbody:first-child > tr:first-child td {
   border-top: 0; }
 
-.panel > .table-bordered,
-.panel > .table-responsive > .table-bordered {
+.panel > .table-bordered, #projets .inner .section-container .project .inner > .table-bordered,
+.panel > .table-responsive > .table-bordered, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered {
   border: 0; }
-  .panel > .table-bordered > thead > tr > th:first-child,
-  .panel > .table-bordered > thead > tr > td:first-child,
-  .panel > .table-bordered > tbody > tr > th:first-child,
-  .panel > .table-bordered > tbody > tr > td:first-child,
-  .panel > .table-bordered > tfoot > tr > th:first-child,
-  .panel > .table-bordered > tfoot > tr > td:first-child,
-  .panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
-  .panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
-  .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
-  .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
-  .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-  .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+  .panel > .table-bordered > thead > tr > th:first-child, #projets .inner .section-container .project .inner > .table-bordered > thead > tr > th:first-child,
+  .panel > .table-bordered > thead > tr > td:first-child, #projets .inner .section-container .project .inner > .table-bordered > thead > tr > td:first-child,
+  .panel > .table-bordered > tbody > tr > th:first-child, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr > th:first-child,
+  .panel > .table-bordered > tbody > tr > td:first-child, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr > td:first-child,
+  .panel > .table-bordered > tfoot > tr > th:first-child, #projets .inner .section-container .project .inner > .table-bordered > tfoot > tr > th:first-child,
+  .panel > .table-bordered > tfoot > tr > td:first-child, #projets .inner .section-container .project .inner > .table-bordered > tfoot > tr > td:first-child,
+  .panel > .table-responsive > .table-bordered > thead > tr > th:first-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .panel > .table-responsive > .table-bordered > thead > tr > td:first-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
     border-left: 0; }
-  .panel > .table-bordered > thead > tr > th:last-child,
-  .panel > .table-bordered > thead > tr > td:last-child,
-  .panel > .table-bordered > tbody > tr > th:last-child,
-  .panel > .table-bordered > tbody > tr > td:last-child,
-  .panel > .table-bordered > tfoot > tr > th:last-child,
-  .panel > .table-bordered > tfoot > tr > td:last-child,
-  .panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
-  .panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
-  .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
-  .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
-  .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-  .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+  .panel > .table-bordered > thead > tr > th:last-child, #projets .inner .section-container .project .inner > .table-bordered > thead > tr > th:last-child,
+  .panel > .table-bordered > thead > tr > td:last-child, #projets .inner .section-container .project .inner > .table-bordered > thead > tr > td:last-child,
+  .panel > .table-bordered > tbody > tr > th:last-child, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr > th:last-child,
+  .panel > .table-bordered > tbody > tr > td:last-child, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr > td:last-child,
+  .panel > .table-bordered > tfoot > tr > th:last-child, #projets .inner .section-container .project .inner > .table-bordered > tfoot > tr > th:last-child,
+  .panel > .table-bordered > tfoot > tr > td:last-child, #projets .inner .section-container .project .inner > .table-bordered > tfoot > tr > td:last-child,
+  .panel > .table-responsive > .table-bordered > thead > tr > th:last-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .panel > .table-responsive > .table-bordered > thead > tr > td:last-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
     border-right: 0; }
-  .panel > .table-bordered > thead > tr:first-child > td,
-  .panel > .table-bordered > thead > tr:first-child > th,
-  .panel > .table-bordered > tbody > tr:first-child > td,
-  .panel > .table-bordered > tbody > tr:first-child > th,
-  .panel > .table-responsive > .table-bordered > thead > tr:first-child > td,
-  .panel > .table-responsive > .table-bordered > thead > tr:first-child > th,
-  .panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,
-  .panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {
+  .panel > .table-bordered > thead > tr:first-child > td, #projets .inner .section-container .project .inner > .table-bordered > thead > tr:first-child > td,
+  .panel > .table-bordered > thead > tr:first-child > th, #projets .inner .section-container .project .inner > .table-bordered > thead > tr:first-child > th,
+  .panel > .table-bordered > tbody > tr:first-child > td, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr:first-child > td,
+  .panel > .table-bordered > tbody > tr:first-child > th, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr:first-child > th,
+  .panel > .table-responsive > .table-bordered > thead > tr:first-child > td, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > thead > tr:first-child > td,
+  .panel > .table-responsive > .table-bordered > thead > tr:first-child > th, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > thead > tr:first-child > th,
+  .panel > .table-responsive > .table-bordered > tbody > tr:first-child > td, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr:first-child > td,
+  .panel > .table-responsive > .table-bordered > tbody > tr:first-child > th, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr:first-child > th {
     border-bottom: 0; }
-  .panel > .table-bordered > tbody > tr:last-child > td,
-  .panel > .table-bordered > tbody > tr:last-child > th,
-  .panel > .table-bordered > tfoot > tr:last-child > td,
-  .panel > .table-bordered > tfoot > tr:last-child > th,
-  .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
-  .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
-  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
-  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
+  .panel > .table-bordered > tbody > tr:last-child > td, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr:last-child > td,
+  .panel > .table-bordered > tbody > tr:last-child > th, #projets .inner .section-container .project .inner > .table-bordered > tbody > tr:last-child > th,
+  .panel > .table-bordered > tfoot > tr:last-child > td, #projets .inner .section-container .project .inner > .table-bordered > tfoot > tr:last-child > td,
+  .panel > .table-bordered > tfoot > tr:last-child > th, #projets .inner .section-container .project .inner > .table-bordered > tfoot > tr:last-child > th,
+  .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th, #projets .inner .section-container .project .inner > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
     border-bottom: 0; }
 
-.panel > .table-responsive {
+.panel > .table-responsive, #projets .inner .section-container .project .inner > .table-responsive {
   border: 0;
   margin-bottom: 0; }
 
 .panel-group {
   margin-bottom: 22px; }
-  .panel-group .panel {
+  .panel-group .panel, .panel-group #projets .inner .section-container .project .inner, #projets .inner .section-container .project .panel-group .inner {
     margin-bottom: 0;
     border-radius: 4px; }
-    .panel-group .panel + .panel {
+    .panel-group .panel + .panel, .panel-group #projets .inner .section-container .project .inner + .panel, #projets .inner .section-container .project .panel-group .inner + .panel, .panel-group #projets .inner .section-container .project .panel + .inner, #projets .inner .section-container .project .panel-group .panel + .inner, .panel-group #projets .inner .section-container .project .inner + .inner, #projets .inner .section-container .project .panel-group .inner + .inner {
       margin-top: 5px; }
-  .panel-group .panel-heading {
+  .panel-group .panel-heading, .panel-group #projets .inner .section-container .project .inner h2, #projets .inner .section-container .project .inner .panel-group h2 {
     border-bottom: 0; }
-    .panel-group .panel-heading + .panel-collapse > .panel-body,
-    .panel-group .panel-heading + .panel-collapse > .list-group {
+    .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group #projets .inner .section-container .project .inner h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-group h2 + .panel-collapse > .panel-body, .panel-group #projets .inner .section-container .project .inner .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-group .panel-heading + .panel-collapse > .description, .panel-group #projets .inner .section-container .project .inner h2 + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-group h2 + .panel-collapse > .description,
+    .panel-group .panel-heading + .panel-collapse > .list-group,
+    .panel-group #projets .inner .section-container .project .inner h2 + .panel-collapse > .list-group, #projets .inner .section-container .project .inner
+    .panel-group h2 + .panel-collapse > .list-group {
       border-top: 1px solid #ddd; }
   .panel-group .panel-footer {
     border-top: 0; }
-    .panel-group .panel-footer + .panel-collapse .panel-body {
+    .panel-group .panel-footer + .panel-collapse .panel-body, .panel-group .panel-footer + .panel-collapse #projets .inner .section-container .project .inner .description, #projets .inner .section-container .project .inner .panel-group .panel-footer + .panel-collapse .description {
       border-bottom: 1px solid #ddd; }
 
-.panel-default {
+.panel-default, #projets .inner .section-container .project .inner {
   border-color: #ddd; }
-  .panel-default > .panel-heading {
+  .panel-default > .panel-heading, #projets .inner .section-container .project .inner > .panel-heading, #projets .inner .section-container .project .inner .panel-default > h2, #projets .inner .section-container .project .inner > h2 {
     color: #333333;
     background-color: #f5f5f5;
     border-color: #ddd; }
-    .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    .panel-default > .panel-heading + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner > .panel-heading + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-default > h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner > h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-default > .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner > .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-default > h2 + .panel-collapse > .description, #projets .inner .section-container .project .inner > h2 + .panel-collapse > .description {
       border-top-color: #ddd; }
-    .panel-default > .panel-heading .badge, .panel-default > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-default > .panel-heading .timeline-badge {
+    .panel-default > .panel-heading .badge, #projets .inner .section-container .project .inner > .panel-heading .badge, #projets .inner .section-container .project .inner .panel-default > h2 .badge, #projets .inner .section-container .project .inner > h2 .badge, .panel-default > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-default > .panel-heading .timeline-badge, #projets .inner .section-container .project .inner > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner > .panel-heading .timeline-badge, #projets .inner .section-container .project .inner .panel-default > h2 #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner .panel-default > h2 .timeline-badge, #projets .inner .section-container .project .inner > h2 #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner > h2 .timeline-badge {
       color: #f5f5f5;
       background-color: #333333; }
-  .panel-default > .panel-footer + .panel-collapse > .panel-body {
+  .panel-default > .panel-footer + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner > .panel-footer + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-default > .panel-footer + .panel-collapse > .description, #projets .inner .section-container .project .inner > .panel-footer + .panel-collapse > .description {
     border-bottom-color: #ddd; }
 
 .panel-primary {
   border-color: #337ab7; }
-  .panel-primary > .panel-heading {
+  .panel-primary > .panel-heading, #projets .inner .section-container .project .inner .panel-primary > h2 {
     color: #fff;
     background-color: #337ab7;
     border-color: #337ab7; }
-    .panel-primary > .panel-heading + .panel-collapse > .panel-body {
+    .panel-primary > .panel-heading + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-primary > h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-primary > .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-primary > h2 + .panel-collapse > .description {
       border-top-color: #337ab7; }
-    .panel-primary > .panel-heading .badge, .panel-primary > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-primary > .panel-heading .timeline-badge {
+    .panel-primary > .panel-heading .badge, #projets .inner .section-container .project .inner .panel-primary > h2 .badge, .panel-primary > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-primary > .panel-heading .timeline-badge, #projets .inner .section-container .project .inner .panel-primary > h2 #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner .panel-primary > h2 .timeline-badge {
       color: #337ab7;
       background-color: #fff; }
-  .panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  .panel-primary > .panel-footer + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-primary > .panel-footer + .panel-collapse > .description {
     border-bottom-color: #337ab7; }
 
 .panel-success {
   border-color: #d6e9c6; }
-  .panel-success > .panel-heading {
+  .panel-success > .panel-heading, #projets .inner .section-container .project .inner .panel-success > h2 {
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6; }
-    .panel-success > .panel-heading + .panel-collapse > .panel-body {
+    .panel-success > .panel-heading + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-success > h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-success > .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-success > h2 + .panel-collapse > .description {
       border-top-color: #d6e9c6; }
-    .panel-success > .panel-heading .badge, .panel-success > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-success > .panel-heading .timeline-badge {
+    .panel-success > .panel-heading .badge, #projets .inner .section-container .project .inner .panel-success > h2 .badge, .panel-success > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-success > .panel-heading .timeline-badge, #projets .inner .section-container .project .inner .panel-success > h2 #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner .panel-success > h2 .timeline-badge {
       color: #dff0d8;
       background-color: #3c763d; }
-  .panel-success > .panel-footer + .panel-collapse > .panel-body {
+  .panel-success > .panel-footer + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-success > .panel-footer + .panel-collapse > .description {
     border-bottom-color: #d6e9c6; }
 
 .panel-info {
   border-color: #bce8f1; }
-  .panel-info > .panel-heading {
+  .panel-info > .panel-heading, #projets .inner .section-container .project .inner .panel-info > h2 {
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1; }
-    .panel-info > .panel-heading + .panel-collapse > .panel-body {
+    .panel-info > .panel-heading + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-info > h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-info > .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-info > h2 + .panel-collapse > .description {
       border-top-color: #bce8f1; }
-    .panel-info > .panel-heading .badge, .panel-info > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-info > .panel-heading .timeline-badge {
+    .panel-info > .panel-heading .badge, #projets .inner .section-container .project .inner .panel-info > h2 .badge, .panel-info > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-info > .panel-heading .timeline-badge, #projets .inner .section-container .project .inner .panel-info > h2 #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner .panel-info > h2 .timeline-badge {
       color: #d9edf7;
       background-color: #31708f; }
-  .panel-info > .panel-footer + .panel-collapse > .panel-body {
+  .panel-info > .panel-footer + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-info > .panel-footer + .panel-collapse > .description {
     border-bottom-color: #bce8f1; }
 
 .panel-warning {
   border-color: #faebcc; }
-  .panel-warning > .panel-heading {
+  .panel-warning > .panel-heading, #projets .inner .section-container .project .inner .panel-warning > h2 {
     color: #8a6d3b;
     background-color: #fcf8e3;
     border-color: #faebcc; }
-    .panel-warning > .panel-heading + .panel-collapse > .panel-body {
+    .panel-warning > .panel-heading + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-warning > h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-warning > .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-warning > h2 + .panel-collapse > .description {
       border-top-color: #faebcc; }
-    .panel-warning > .panel-heading .badge, .panel-warning > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-warning > .panel-heading .timeline-badge {
+    .panel-warning > .panel-heading .badge, #projets .inner .section-container .project .inner .panel-warning > h2 .badge, .panel-warning > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-warning > .panel-heading .timeline-badge, #projets .inner .section-container .project .inner .panel-warning > h2 #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner .panel-warning > h2 .timeline-badge {
       color: #fcf8e3;
       background-color: #8a6d3b; }
-  .panel-warning > .panel-footer + .panel-collapse > .panel-body {
+  .panel-warning > .panel-footer + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-warning > .panel-footer + .panel-collapse > .description {
     border-bottom-color: #faebcc; }
 
 .panel-danger {
   border-color: #ebccd1; }
-  .panel-danger > .panel-heading {
+  .panel-danger > .panel-heading, #projets .inner .section-container .project .inner .panel-danger > h2 {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1; }
-    .panel-danger > .panel-heading + .panel-collapse > .panel-body {
+    .panel-danger > .panel-heading + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-danger > h2 + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-danger > .panel-heading + .panel-collapse > .description, #projets .inner .section-container .project .inner .panel-danger > h2 + .panel-collapse > .description {
       border-top-color: #ebccd1; }
-    .panel-danger > .panel-heading .badge, .panel-danger > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-danger > .panel-heading .timeline-badge {
+    .panel-danger > .panel-heading .badge, #projets .inner .section-container .project .inner .panel-danger > h2 .badge, .panel-danger > .panel-heading #parcours .timeline li .timeline-badge, #parcours .timeline li .panel-danger > .panel-heading .timeline-badge, #projets .inner .section-container .project .inner .panel-danger > h2 #parcours .timeline li .timeline-badge, #parcours .timeline li #projets .inner .section-container .project .inner .panel-danger > h2 .timeline-badge {
       color: #f2dede;
       background-color: #a94442; }
-  .panel-danger > .panel-footer + .panel-collapse > .panel-body {
+  .panel-danger > .panel-footer + .panel-collapse > .panel-body, #projets .inner .section-container .project .inner .panel-danger > .panel-footer + .panel-collapse > .description {
     border-bottom-color: #ebccd1; }
 
 .embed-responsive {
@@ -8006,11 +8011,6 @@ html, body {
   height: 100%;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
 
-.me {
-  font-family: "Indie Flower", "Helvetica Neue", Arial, sans-serif;
-  font-size: larger;
-  font-weight: 700; }
-
 header {
   width: 100%;
   height: 100%;
@@ -8018,6 +8018,12 @@ header {
   background-size: cover;
   position: relative;
   color: #ffffff; }
+  header .me {
+    font-family: "Indie Flower", "Helvetica Neue", Arial, sans-serif;
+    font-size: larger;
+    font-weight: 700; }
+  header .fonction {
+    display: none; }
   header .header-container {
     position: absolute;
     top: 30%;
@@ -8026,6 +8032,10 @@ header {
       margin-right: auto;
       margin-left: auto;
       max-width: 1000px; }
+      header .header-container .header-inner .title h2 {
+        margin-bottom: 50px; }
+      header .header-container .header-inner .infos {
+        display: none !important; }
       header .header-container .header-inner img {
         height: 100px;
         margin-bottom: 20px;
@@ -8128,3 +8138,11 @@ section {
   #parcours .section-container > a {
     background-color: #ffffff;
     color: #222D2F; }
+
+#projets .inner .section-container .project .inner h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold; }
+
+#projets .inner .section-container .project .inner img {
+  width: 100%; }

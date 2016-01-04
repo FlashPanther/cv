@@ -2,40 +2,120 @@
 
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
-a:after{content: '' !important;}
+body{
+  -webkit-print-color-adjust: exact;
+}
 
-header{
-  @extend .text-center;
-  border-bottom: solid 1px;
-  img, a{
+section{
+  .section-container>a{
     display: none !important;
   }
 }
 
-#competences{display: none !important;}
-#section2{
-  .competence{
-    @extend .row;
-    h2{
-      @extend .col-xs-4;
-    }
-    .level{
-      display: none !important;
-    }
-    .details{
-      padding-top: 30px;
-      @extend .col-md-8;
-      @extend .list-unstyled;
-      @extend .text-right;
-      li{
-        @extend .label;
-        @extend .label-default;
-        a{color: white;}
+a:after{content: '' !important;}
+
+header{
+  @extend .row;
+  @extend .col-xs-12;
+  @extend .row;
+  border-bottom: solid 1px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  h2{display: none !important;}
+  .title{
+    h1{
+      font-weight: bold;
+      .me{
+        @extend .col-xs-12;
+      }
+      .fonction{
+        @extend .col-xs-12;
+        font-size: 15px;
       }
     }
-    .description{
-      clear: both;
-      @extend .col-md-12;
+  }
+  .image{
+    @extend .pull-right;
+    @extend .col-xs-3;
+  }
+  .infos{
+    font-size: 12px;
+    margin-top: 25px;
+    @extend .pull-left;
+    @extend .col-xs-9;
+  }
+  a{
+    display: none !important;
+  }
+}
+
+#intro{display: none !important;}
+#competences{
+  .competence{
+    .inner{
+      margin-top: 20px;
+      @extend .row;
+      .level{
+        display: none !important;
+      }
+      h2{
+        @extend .col-xs-3;
+        margin: 0px;
+        font-size: 19px;
+      }
+      ul.details{
+        @extend .col-xs-9;
+        @extend .list-unstyled;
+        li{
+          &:after{
+            content: ',';
+          }
+          float: left;
+          margin-right: 3px;
+        }
+      }
+      .description{
+        color: #555555 !important;
+        @extend .col-xs-offset-3;
+        @extend .col-xs-9;
+      }
     }
   }
+}
+
+#parcours{
+  page-break-before: always;
+  ul.timeline{
+    @extend .list-unstyled;
+    li{
+      @extend .row;
+      margin-top: 10px;
+      padding: 10px;
+      &:nth-of-type(odd){
+        background-color: #d4d4d4 !important;
+      }
+      .timeline-badge{
+        display: none !important;
+      }
+      .timeline-heading{
+        a{
+          @extend .col-xs-6;
+          @extend .pull-right;
+        }
+        .time{
+          @extend .pull-left;
+          @extend .col-xs-6;
+        }
+        @extend .col-xs-6;
+      }
+      .timeline-body{
+        @extend .col-xs-6;
+      }
+    }
+  }
+}
+
+#projets{
+  display: none;
+  page-break-before: always;
 }
