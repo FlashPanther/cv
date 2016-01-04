@@ -14,9 +14,11 @@ $parcoursColor: #ffffff;
 //$border-radius-large:   40px !default;
 $line-height-base:        22/14 !default;
 
+$fa-font-path:   "fonts/" !default;
 $icon-font-path: "fonts/" !default;
 
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bower_components/components-font-awesome/scss/font-awesome";
 
 $seriousFont: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 $funnyFont: 'Indie Flower', 'Helvetica Neue', Arial, sans-serif;
