@@ -5,11 +5,21 @@ $headerColor: #ffffff;
 $introBgColor: #446D73;
 $introColor: #ffffff;
 
+$navbar-default-link-hover-color: $introBgColor !default;
+$navbar-default-link-hover-bg: $introColor !default;
+$navbar-default-link-active-color: $introBgColor !default;
+$navbar-default-link-active-bg: $introColor !default;
+
+$navbar-default-link-color: $introColor !default;
+
 $competencesBgColor: #222D2F;
 $competencesColor: #ffffff;
 
 $parcoursBgColor: #821F31;
 $parcoursColor: #ffffff;
+
+$contactBgColor: #222D2F;
+$contactColor: #ffffff;
 
 //$border-radius-large:   40px !default;
 $line-height-base:        22/14 !default;
@@ -27,8 +37,8 @@ html, body{
   height: 100%;
   font-family: $seriousFont;
 }
+.me{font-family: $funnyFont; font-size: larger; font-weight: 700}
 header{
-  .me{font-family: $funnyFont; font-size: larger; font-weight: 700}
   .fonction{
     display: none;
   }
@@ -244,10 +254,13 @@ section{
 }
 
 #projets{
+  background-image: url('https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=93ace5960cf6a5f05c4805589e65ce7c');
   .inner{
     .section-container{
       .project{
-        @extend .col-xs-4;
+        @extend .col-lg-4;
+        @extend .col-sm-6;
+        @extend .col-xs-12;
         .inner{
           @extend .panel;
           @extend .panel-default;
@@ -267,4 +280,72 @@ section{
       }
     }
   }
+}
+
+#contact{
+  background-color: $contactBgColor;
+  color: $contactColor;
+  .inner{
+    .section-container{
+      ul{
+        @extend .row;
+        @extend .col-xs-6;
+        @extend .list-unstyled;
+        &.contacts{
+          li{
+            i{
+              width: 20px;
+            }
+          }
+        }
+        &.links{
+          @extend .text-right;
+          li{
+            display: inline-block;
+            a{
+              color: $contactColor;
+              margin-left: 20px;
+              i{
+                font-size: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+nav{
+  @extend .navbar;
+  @extend .navbar-fixed-top;
+  @extend .navbar-default;
+  transition: all 1s;
+  >div>a{
+    @extend .navbar-brand;
+    font-family: $funnyFont;
+  }
+  background: none;
+  border: none;
+  &.scrolled{
+    background-color: $introBgColor;
+  }
+  div{
+    @extend .container;
+    ul{
+      @extend .nav;
+      @extend .navbar-nav;
+      @extend .navbar-right;
+      li{
+        a{
+
+        }
+      }
+    }
+  }
+}
+
+footer{
+  text-align: center;
+  padding: 50px 0;
 }
