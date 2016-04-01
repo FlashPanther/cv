@@ -11,6 +11,7 @@ gulp.task('js', function(){
         'bower_components/jquery/dist/jquery.js',
         'bower_components/jquery.easing/js/jquery.easing.js',
         'bower_components/wow/dist/wow.js',
+        'bower_components/jquery.stellar/jquery.stellar.js',
         'js/page-scroll.js'
     ])
         .pipe(concat('app.js'))

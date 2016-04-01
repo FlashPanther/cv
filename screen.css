@@ -10089,6 +10089,9 @@ a > span.down {
   font-size: 10px;
   bottom: 4px; }
 
+html {
+  overflow-x: hidden; }
+
 html, body {
   height: 100%;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
@@ -10211,6 +10214,7 @@ section {
           width: 20px;
           height: 20px; }
       #parcours .timeline li .timeline-panel {
+        z-index: 0 !important;
         display: block;
         position: relative;
         max-width: none;
@@ -10223,7 +10227,7 @@ section {
     color: #222D2F; }
 
 #projets {
-  background-image: url("https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=93ace5960cf6a5f05c4805589e65ce7c"); }
+  background-image: url("https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&h=800&crop=entropy&s=93ace5960cf6a5f05c4805589e65ce7c"); }
   #projets .inner .section-container .project .inner h2 {
     margin: 0;
     font-size: 15px;

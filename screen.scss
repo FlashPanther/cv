@@ -33,6 +33,9 @@ $icon-font-path: "fonts/" !default;
 $seriousFont: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 $funnyFont: 'Indie Flower', 'Helvetica Neue', Arial, sans-serif;
 a>span.down{@extend .glyphicon; @extend .glyphicon-chevron-down;margin-left: 5px;font-size: 10px;bottom: 4px;}
+html{
+  overflow-x: hidden;
+}
 html, body{
   height: 100%;
   font-family: $seriousFont;
@@ -227,6 +230,7 @@ section{
         @extend .popover;
         @extend .fade;
         @extend .in;
+        z-index: 0 !important;
         display: block;
         position: relative;
         max-width: none;
@@ -254,7 +258,7 @@ section{
 }
 
 #projets{
-  background-image: url('https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=93ace5960cf6a5f05c4805589e65ce7c');
+  background-image: url('https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&h=800&crop=entropy&s=93ace5960cf6a5f05c4805589e65ce7c');
   .inner{
     .section-container{
       .project{

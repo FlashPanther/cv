@@ -1,18 +1,20 @@
 $(function(){
     "use strict"; // Start of use strict
 
-    //var currentAnchor = function(){
-    //    var anchor = null;
-    //    $('section').each(function(){
-    //        var id = $(this).attr('id');
-    //        var position = $(this).offset().top - 100;
-    //        if(position > $(window).scrollTop()){
-    //            return anchor;
-    //        }
-    //        anchor = id;
-    //    });
-    //    return anchor;
-    //};
+    var currentAnchor = function(){
+        var anchor = null;
+        $('section').each(function(){
+            var id = $(this).attr('id');
+            var position = $(this).offset().top - 100;
+            if(position > $(window).scrollTop()){
+                return anchor;
+            }
+            anchor = id;
+        });
+        return anchor;
+    };
+
+
 
     $('a').on('click', function (event) {
         var $anchor = $(this);
@@ -24,10 +26,11 @@ $(function(){
         $('html, body').stop().animate({
             scrollTop: (top)
         }, 1250
-            //,
-            //function(){
-            //    console.log(currentAnchor());
-            //}
+            ,
+            function(){
+                $('nav li').each(function(){$(this).removeClass('active')});
+                $("nav a[href='#"+currentAnchor()+"']").parents('li').addClass('active');
+            }
         );
         event.preventDefault();
     });
@@ -39,6 +42,7 @@ $(function(){
     });
     onScroll();
 
+    $.stellar();
 
 });
 
