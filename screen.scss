@@ -291,9 +291,16 @@ section{
   color: $contactColor;
   .inner{
     .section-container{
+      .location{
+        #map{
+          height: 200px;
+          width: 100%;
+        }
+        @extend .col-xs-4;
+      }
       ul{
         @extend .row;
-        @extend .col-xs-6;
+        @extend .col-xs-4;
         @extend .list-unstyled;
         &.contacts{
           li{

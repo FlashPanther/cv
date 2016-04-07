@@ -303,6 +303,21 @@
                     <i class="fa fa-file"></i> <a target="_blank" href="https://drive.google.com/open?id=1JPUzp9K--LXs25URoM3h10t9hTNpAuNEUldGsiCpNnw">Mon CV</a></br>
                 </li>
             </ul>
+            <div class="location">
+                &nbsp;<i class="fa fa-map-marker"></i> &nbsp;&nbsp;Frasnes-lez-Buissenal, Hainaut (Belgique)</br></br>
+                <div id="map"></div>
+            </div>
+            <script>
+                function initMap() {
+                    var mapDiv = document.getElementById('map');
+                    var map = new google.maps.Map(mapDiv, {
+                        center: {lat: 50.66, lng: 3.61},
+                        zoom: 12,
+
+                    });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
             <ul class="links">
                 <li>
                     <a href="https://twitter.com/tompsy" target="_blank">
