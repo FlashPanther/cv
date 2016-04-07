@@ -14,9 +14,9 @@ gulp.task('js', function(){
         'bower_components/jquery.stellar/jquery.stellar.js',
         'js/page-scroll.js'
     ])
+        .pipe(uglify())
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./'))
-        //.pipe(uglify())
         ;
 });
 
@@ -26,7 +26,7 @@ gulp.task('screen', function(){
         'screen.scss'
     ])
         .pipe(sass())
-        //.pipe(uglifycss())
+        .pipe(uglifycss())
         .pipe(concat('screen.css'))
         .pipe(gulp.dest('./'));
 });
@@ -36,7 +36,7 @@ gulp.task('print', function(){
         'print.scss'
     ])
         .pipe(sass())
-        //.pipe(uglifycss())
+        .pipe(uglifycss())
         .pipe(concat('print.css'))
         .pipe(gulp.dest('./'));
 });
